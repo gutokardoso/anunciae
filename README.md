@@ -1,8 +1,8 @@
-# Anunciaê! v6
+# Anunciaê! v7
 
 Plataforma de tráfego pago simplificado com autenticação, PostgreSQL e Administração Geral.
 
-## Novidades da v6
+## Novidades da v7
 - Onboarding inteligente no primeiro acesso do cliente.
 - Perfil **Minha empresa** editável em modal, com segmento, produtos/serviços, WhatsApp, site, redes sociais, região atendida, público, diferenciais, ticket médio, objetivo e orçamento de referência.
 - Dados do negócio persistidos no PostgreSQL e reutilizados no fluxo de criação de anúncios.
@@ -20,3 +20,6 @@ npm install
 npm test
 npm start
 ```
+
+- Refinamento da etapa Resultado: opção “Acessar meu site” com ação desejada (assinar plano, comprar, orçamento, cadastro, agendamento/reserva ou outra).
+- Radios alinhados antes dos ícones e seta do submenu Criar anúncio centralizada.
