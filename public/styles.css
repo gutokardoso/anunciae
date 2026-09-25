@@ -26,7 +26,7 @@ body.appBooting header,body.appBooting main,body.appBooting footer{visibility:hi
 .aiPlan{padding:22px}.aiCreativeIntro{display:flex;justify-content:space-between;align-items:end;margin:8px 0 12px}.aiCreativeIntro h4{margin:0 0 4px}.aiCreativeIntro p{margin:0;color:var(--muted)}
 .adPreviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.adPreview{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.adPreview.selected{border-color:var(--teal);box-shadow:0 0 0 2px rgba(0,128,128,.12)}.adPreviewMedia{aspect-ratio:1;background:#f2f4f7;overflow:hidden}.adPreviewMedia img{width:100%;height:100%;object-fit:cover}.adPreviewBody{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}.adPreviewBody>small{color:var(--teal);font-size:10px;letter-spacing:.5px}.adPreviewBody>strong{font-size:17px;line-height:1.25}.adPreviewBody>p{font-size:13px;line-height:1.45;margin:0;color:#344054}.adMeta{border-top:1px solid var(--line);padding-top:9px;display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:10px}.creativeActions{display:grid;gap:7px;margin-top:auto;padding-top:6px}.creativeActions button{width:100%;font-size:12px}.approved{border:1px solid var(--teal);background:#eaf7f5;color:#075e57;border-radius:10px;padding:10px;font-weight:700}.aiDetails{margin-top:16px;border:1px solid var(--line);border-radius:14px;padding:0 16px}.aiDetails summary{cursor:pointer;padding:15px 0;font-weight:700}.aiDetails .aiGrid{padding-bottom:14px}.referenceImageList{display:flex;gap:9px;flex-wrap:wrap}.referenceImageList span{position:relative;width:76px;height:76px;border:1px solid var(--line);border-radius:11px;overflow:hidden}.referenceImageList img{width:100%;height:100%;object-fit:cover}.referenceImageList button{position:absolute;right:3px;top:3px;width:22px;height:22px;border:0;border-radius:50%;background:#fff;box-shadow:0 1px 5px #0003;cursor:pointer}
 @media(max-width:900px){.adPreviewGrid{grid-template-columns:1fr}.modalDialog:has(.aiPlan){width:min(720px,100%)}}
-/* v16 — padrão visual de ações */
+/* v17 — padrão visual de ações */
 :root{--action:#007A8C;--action-hover:#006b7a}
 .primary,.actionImportant{background:var(--action);color:#fff;border:1px solid var(--action);border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}
 .primary:hover,.actionImportant:hover{background:var(--action-hover);border-color:var(--action-hover)}
@@ -39,7 +39,7 @@ body.appBooting header,body.appBooting main,body.appBooting footer{visibility:hi
 .navArrow{height:20px;line-height:20px;transform:none;position:relative;top:-1px}
 @media(max-width:760px){.adActions{gap:10px}.adActions button{min-height:42px}}
 
-/* v16 — ações consistentes, estados de IA e alinhamento */
+/* v17 — ações consistentes, estados de IA e alinhamento */
 .adActions .viewAI,.adActions .generateAI{background:#007A8C!important;border-color:#007A8C!important;color:#fff!important;min-width:132px}
 .formActions .regenerateAI{background:#007A8C!important;border-color:#007A8C!important;color:#fff!important}
 .creativeActions button{min-height:40px}
@@ -48,10 +48,10 @@ body.appBooting header,body.appBooting main,body.appBooting footer{visibility:hi
 .navDropButton{display:inline-flex!important;align-items:center!important;gap:6px!important}
 .navDropButton .navArrow{display:inline-grid!important;place-items:center!important;width:14px!important;height:20px!important;line-height:20px!important;position:static!important;transform:translateY(-1px)!important;font-size:14px!important}
 
-/* v16: definitive navigation arrow alignment */
+/* v17: definitive navigation arrow alignment */
 .navDropButton{display:inline-flex!important;align-items:center!important;gap:7px!important;line-height:1!important}
 .navDropButton .navArrow{display:block!important;width:7px!important;height:7px!important;border-right:1.5px solid currentColor!important;border-bottom:1.5px solid currentColor!important;transform:rotate(45deg) translateY(-2px)!important;transform-origin:center!important;position:static!important;flex:0 0 7px!important}
 
-/* v16 — visualização dos formatos preparados */
+/* v17 — visualização dos formatos preparados */
 .formatStatus{display:grid;gap:8px}.formatStatus .viewFormats{width:100%;font-size:12px}.formatsModal{padding:22px 24px 24px}.formatsIntro{margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.5}.formatPreviewGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}.formatPreviewCard{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;min-width:0}.formatPreviewMedia{background:#f2f4f7;display:grid;place-items:center;overflow:hidden}.formatPreviewMedia.quadrado{aspect-ratio:1/1}.formatPreviewMedia.horizontal{aspect-ratio:1.91/1}.formatPreviewMedia.vertical{aspect-ratio:9/16;max-height:460px}.formatPreviewMedia img{width:100%;height:100%;object-fit:cover;display:block}.formatPreviewInfo{padding:13px 14px}.formatPreviewInfo strong{display:flex;justify-content:space-between;gap:8px;font-size:14px}.formatPreviewInfo strong span{color:var(--teal);font-size:12px}.formatPreviewInfo p{margin:6px 0 0;color:var(--muted);font-size:12px;line-height:1.4}.modalDialog:has(.formatsModal){width:min(1080px,100%)}
 @media(max-width:760px){.formatsModal{padding:18px}.formatPreviewGrid{grid-template-columns:1fr}.formatPreviewMedia.vertical{max-height:none}}
