@@ -1,23 +1,20 @@
-# Anunciaê! v8
+# Anunciaê! v9
 
-Plataforma de tráfego pago simplificado com autenticação, PostgreSQL e Administração Geral.
+## Item 3 — IA de criação de campanhas
 
-## Novidades da v8
-- Refresh mantém o usuário na mesma área/tela da aplicação; a logo continua levando explicitamente para a Home pública.
-- **Minha empresa** foi simplificada: objetivo da campanha, investimento diário e preferência de controle foram removidos por serem informações específicas de cada anúncio.
-- **Ticket médio** foi renomeado para **Valor médio por cliente (ticket médio)** e ganhou explicação no formulário.
-- **Tipo de atendimento** agora diferencia Online, Presencial/local e Online e presencial.
-- Para negócios online, Cidade/base e Região atendida deixam de aparecer e são substituídas por **Área de atuação**: Todo o Brasil, Países específicos ou Internacional.
-- Em Países específicos, o usuário informa os países atendidos.
-- Para negócios presenciais, Cidade/base e Região atendida continuam disponíveis.
-- O assistente de criação usa a área de atuação da empresa como contexto inicial de localização, mas objetivo, orçamento e controle são definidos no próprio anúncio.
-- Mantidos o assistente em 6 etapas, Manual da marca, Meus anúncios, Concorrentes, Conexões e Administração Geral.
+A v9 adiciona preparação real de campanhas com IA. Em **Meus anúncios**, cada rascunho pode ser enviado para a IA, que usa o contexto de **Minha empresa**, **Manual da marca** e os dados específicos do anúncio para criar estratégia, sugestão de público, CTA, texto principal, título e três variações para teste. O resultado fica salvo no PostgreSQL e pode ser visualizado em modal ou regenerado. Nada é publicado em plataformas de mídia nesta etapa.
 
-## Produção
-Requer `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` e `NODE_ENV=production` no Railway.
+### Variáveis novas no Railway
 
-```bash
-npm install
-npm test
-npm start
-```
+- `OPENAI_API_KEY` — obrigatória para a geração por IA.
+- `OPENAI_MODEL` — opcional; padrão: `gpt-5.6-luna`.
+
+As variáveis existentes (`DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`, `NODE_ENV`) continuam iguais.
+
+### Segurança e comportamento
+
+A chave da IA fica apenas no servidor e nunca é enviada ao navegador. A geração não inventa publicação, não altera orçamento e não publica mídia. Cada campanha permanece isolada por usuário.
+
+### Testes
+
+Execute `npm test`. O teste valida autenticação, onboarding, Manual da marca, CRUD, isolamento, proteção administrativa e o bloqueio seguro da IA quando a chave não está configurada.
