@@ -1,0 +1,35 @@
+{
+  "business": {
+    "name": "",
+    "category": "",
+    "site": "",
+    "instagram": "",
+    "city": "",
+    "radius": 15,
+    "goal": "whatsapp",
+    "budget": 20,
+    "mode": "approval"
+  },
+  "brand": {
+    "colors": "#102A43, #FF6B5E",
+    "instructions": "",
+    "assets": []
+  },
+  "campaigns": [],
+  "competitors": [],
+  "decisions": [],
+  "integrations": {
+    "meta": {
+      "connected": false
+    },
+    "google": {
+      "connected": false
+    },
+    "whatsapp": {
+      "connected": false
+    },
+    "payments": {
+      "connected": false
+    }
+  }
+}

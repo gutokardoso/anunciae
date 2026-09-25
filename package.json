@@ -1,0 +1,1 @@
+{"name":"anunciae-v1","version":"1.0.0","private":true,"scripts":{"start":"node server.js","test":"node tests/smoke.test.js"},"engines":{"node":">=20"}}
