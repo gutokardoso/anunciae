@@ -1,22 +1,22 @@
-# Anunciaê! v3
+# Anunciaê! v4
 
-Versão com cadastro/login, isolamento por usuário, Administração Geral e persistência real em PostgreSQL.
+Plataforma de tráfego pago simplificado — **Anunciar ficou fácil.**
+
+## v4
+- Home pública comercial completa e separada do painel.
+- A logo sempre direciona para a página inicial pública.
+- Navegação de cliente aparece somente dentro do painel autenticado.
+- Área **Meus anúncios** com todos os anúncios da conta.
+- Edição de nome, objetivo, orçamento, modo de criativo e controle.
+- Exclusão com confirmação e proteção por proprietário.
+- PostgreSQL em produção via `DATABASE_URL`.
+- Administração Geral preservada.
 
 ## Railway
-Variáveis do serviço `anunciae`:
-- `DATABASE_URL` = referência ao `Postgres.DATABASE_URL` (já configurada).
-- `ADMIN_EMAIL` = e-mail do Administrador Geral.
-- `ADMIN_PASSWORD` = senha forte do Administrador Geral, mínimo 8 caracteres.
-- `NODE_ENV=production` = recomendado.
+Variáveis: `DATABASE_URL`, `NODE_ENV=production`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`.
 
-Ao iniciar com `DATABASE_URL`, a aplicação cria automaticamente tabelas e índices sem apagar dados existentes. O admin só é criado automaticamente quando `ADMIN_EMAIL` e `ADMIN_PASSWORD` estão definidos.
+## Executar
+`npm install` e `npm start`
 
-## Banco
-Tabelas: `users`, `sessions`, `businesses`, `brands`, `campaigns`, `competitors`, `decisions`, `integrations`, `creatives` e `campaign_results`. Dados operacionais são vinculados ao usuário autenticado. A Administração Geral exige `role=admin`.
-
-Sem `DATABASE_URL`, a aplicação usa memória somente para desenvolvimento/QA; não há mais persistência em `db.json`.
-
-## QA
+## Testar
 `npm test`
-
-Depois do deploy, `/api/health` deve retornar `version: anunciae-v3` e `database: postgresql`.
