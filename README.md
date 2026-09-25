@@ -1,22 +1,22 @@
-# Anunciaê! v4
+# Anunciaê! v5
 
-Plataforma de tráfego pago simplificado — **Anunciar ficou fácil.**
+Plataforma de tráfego pago simplificado com autenticação, PostgreSQL e Administração Geral.
 
-## v4
-- Home pública comercial completa e separada do painel.
-- A logo sempre direciona para a página inicial pública.
-- Navegação de cliente aparece somente dentro do painel autenticado.
-- Área **Meus anúncios** com todos os anúncios da conta.
-- Edição de nome, objetivo, orçamento, modo de criativo e controle.
-- Exclusão com confirmação e proteção por proprietário.
-- PostgreSQL em produção via `DATABASE_URL`.
-- Administração Geral preservada.
+## Novidades da v5
+- **Meus anúncios** agora é submenu de **Criar anúncio**.
+- Edição de anúncio em **modal**, sem sair da listagem.
+- **Minha marca / Biblioteca da marca** renomeados para **Manual da marca**.
+- Manual da marca em modal, com card organizado para logo, cores reais, regras e presença digital.
+- Regras salvas ficam visíveis no próprio Manual da marca.
+- Logo salva e exibida no card (PNG/JPG/WebP até 1 MB).
+- Cadastro de site, Instagram, Facebook, TikTok, LinkedIn e YouTube para contexto da marca.
+- Manual pode ser editado ou removido.
 
-## Railway
-Variáveis: `DATABASE_URL`, `NODE_ENV=production`, `ADMIN_EMAIL`, `ADMIN_PASSWORD`.
+## Produção
+Requer `DATABASE_URL`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` e `NODE_ENV=production` no Railway.
 
-## Executar
-`npm install` e `npm start`
-
-## Testar
-`npm test`
+```bash
+npm install
+npm test
+npm start
+```
