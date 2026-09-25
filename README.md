@@ -1,8 +1,8 @@
-# Anunciaê! v10
+# Anunciaê! v11
 
 ## Item 3 — IA de criação de campanhas
 
-A v10 adiciona preparação real de campanhas com IA. Em **Meus anúncios**, cada rascunho pode ser enviado para a IA, que usa o contexto de **Minha empresa**, **Manual da marca** e os dados específicos do anúncio para criar estratégia, sugestão de público, CTA, texto principal, título e três variações para teste. O resultado fica salvo no PostgreSQL e pode ser visualizado em modal ou regenerado. Nada é publicado em plataformas de mídia nesta etapa.
+A v11 adiciona preparação real de campanhas com IA. Em **Meus anúncios**, cada rascunho pode ser enviado para a IA, que usa o contexto de **Minha empresa**, **Manual da marca** e os dados específicos do anúncio para criar estratégia, sugestão de público, CTA, texto principal, título e três variações para teste. O resultado fica salvo no PostgreSQL e pode ser visualizado em modal ou regenerado. Nada é publicado em plataformas de mídia nesta etapa.
 
 ### Variáveis novas no Railway
 
@@ -20,9 +20,17 @@ A chave da IA fica apenas no servidor e nunca é enviada ao navegador. A geraç�
 Execute `npm test`. O teste valida autenticação, onboarding, Manual da marca, CRUD, isolamento, proteção administrativa e o bloqueio seguro da IA quando a chave não está configurada.
 
 
-## v10
+## v11
 - Corrige o flash da Home no refresh: a interface só é revelada depois de restaurar sessão e tela.
 - Refina a IA para gerar três ângulos publicitários realmente diferentes.
 - Gera previews visuais com imagens via OpenAI Images API quando a campanha usa “Criar com IA”.
-- Exige Responses → Write e Images → Write na chave OpenAI.
-- Atualiza todos os marcadores de versão para v10.
+- Exige Responses → Write e Images → Request na chave OpenAI.
+- Atualiza todos os marcadores de versão para v11.
+
+### Aprovação de criativos
+- Três previews publicitários priorizados no modal.
+- Seleção persistente do criativo aprovado, sem publicar mídia.
+- Edição individual de título e texto.
+- Regeneração individual da imagem.
+- Estratégia, público e observações em área recolhível.
+- Manual da marca aceita até 3 imagens reais de referência, além da logo; quando disponíveis, a geração visual usa essas imagens como referência.
