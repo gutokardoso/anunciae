@@ -1,4 +1,4 @@
-# Anunciaê! v38
+# Anunciaê! v39
 
 ## Nova Home comercial
 
@@ -101,7 +101,7 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - A validação Meta v26.0 da v32 foi preservada integralmente.
 
 
-## Google Ads OAuth (v38)
+## Google Ads OAuth (v39)
 - OAuth Web real com callback `https://anunciae-production.up.railway.app/api/integrations/google/callback`.
 - Escopo `https://www.googleapis.com/auth/adwords`, acesso offline e refresh token criptografado em repouso.
 - Variáveis: `GOOGLE_CLIENT_ID` e `GOOGLE_CLIENT_SECRET`.
@@ -110,8 +110,13 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - Esta versão não cria nem publica campanhas no Google Ads.
 
 
-## v38 — Google Ads API
+## v39 — Google Ads API
 - Remove a exigência legada de `GOOGLE_ADS_DEVELOPER_TOKEN`.
 - Mantém o OAuth e os tokens já persistidos.
 - Consulta contas acessíveis com Bearer OAuth e preserva a seleção de conta.
 - Nenhuma campanha é criada ou publicada nesta versão.
+
+
+## v39 — ajuste visual LinkedIn Ads
+- Ícone do LinkedIn Ads passou a usar a marca vetorial limpa via Simple Icons, sem o contorno aplicado aos SVGs genéricos da interface.
+- Nenhuma alteração funcional nas integrações Meta Ads ou Google Ads.
