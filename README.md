@@ -1,4 +1,4 @@
-# Anunciaê! v32
+# Anunciaê! v33
 
 ## Nova Home comercial
 
@@ -91,3 +91,11 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - A validação usa a Marketing API v26.0 e não cria campanha, conjunto, anúncio, cobrança ou publicação.
 - O resultado fica registrado na integração apenas como último estado de validação.
 - Esta etapa é deliberadamente anterior à criação da primeira campanha pausada, reduzindo o risco de criar objetos com ativos incorretos ou conta restrita.
+
+## v33 — Central multicanal
+- Estrutura comum de canais publicitários: Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e X Ads.
+- Conexões exibe os cinco canais de mídia sem simular autorização; somente Meta permanece funcional nesta etapa.
+- Criar anúncio ganhou a etapa Canais e permite selecionar um ou mais destinos.
+- A campanha salva os canais escolhidos como dados estruturados para os futuros adaptadores de publicação e métricas.
+- WhatsApp e Pagamentos permanecem integrações auxiliares separadas dos canais de mídia.
+- A validação Meta v26.0 da v32 foi preservada integralmente.
