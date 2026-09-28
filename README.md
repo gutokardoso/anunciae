@@ -1,4 +1,4 @@
-# Anunciaê! v36
+# Anunciaê! v37
 
 ## Nova Home comercial
 
@@ -92,10 +92,18 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - O resultado fica registrado na integração apenas como último estado de validação.
 - Esta etapa é deliberadamente anterior à criação da primeira campanha pausada, reduzindo o risco de criar objetos com ativos incorretos ou conta restrita.
 
-## v36 — Refinamento visual multicanal
+## v37 — Refinamento visual multicanal
 - Estrutura comum de canais publicitários: Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e X Ads.
 - Conexões exibe os cinco canais de mídia sem simular autorização; somente Meta permanece funcional nesta etapa.
 - Criar anúncio ganhou a etapa Canais e permite selecionar um ou mais destinos.
 - A campanha salva os canais escolhidos como dados estruturados para os futuros adaptadores de publicação e métricas.
 - WhatsApp e Pagamentos permanecem integrações auxiliares separadas dos canais de mídia.
 - A validação Meta v26.0 da v32 foi preservada integralmente.
+
+
+## Google Ads OAuth (v37)
+- OAuth Web real com callback `https://anunciae-production.up.railway.app/api/integrations/google/callback`.
+- Escopo `https://www.googleapis.com/auth/adwords`, acesso offline e refresh token criptografado em repouso.
+- Variáveis: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` e `GOOGLE_ADS_DEVELOPER_TOKEN`.
+- Lista contas acessíveis pela Google Ads API v25, permite selecionar/salvar a conta e desconectar/revogar a autorização.
+- Esta versão não cria nem publica campanhas no Google Ads.
