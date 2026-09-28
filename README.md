@@ -1,4 +1,4 @@
-# Anunciaê! v31
+# Anunciaê! v32
 
 ## Nova Home comercial
 
@@ -74,7 +74,7 @@ Execute `npm test`. O teste valida autenticação, onboarding, Manual da marca, 
 - Formatos manuais permanecem intactos ao escolher o anúncio e são identificados como imagem enviada pelo cliente.
 
 
-## Meta Ads OAuth (v31)
+## Meta Ads OAuth (v32)
 Callback oficial: `https://anunciae-production.up.railway.app/api/integrations/meta/callback`
 
 Variáveis no Railway (não colocar valores no código/GitHub):
@@ -84,3 +84,10 @@ Variáveis no Railway (não colocar valores no código/GitHub):
 - `META_SCOPES` (opcional; padrão: `ads_management,ads_read,business_management,pages_show_list,pages_read_engagement`)
 
 O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma chave derivada do App Secret. A interface só marca a integração como conectada após troca real do código OAuth por um token.
+
+
+## Meta Ads — validação segura v32
+- Adiciona validação em tempo real da autorização, portfólio, conta de anúncios, Página e Instagram antes de criar qualquer objeto publicitário.
+- A validação usa a Marketing API v26.0 e não cria campanha, conjunto, anúncio, cobrança ou publicação.
+- O resultado fica registrado na integração apenas como último estado de validação.
+- Esta etapa é deliberadamente anterior à criação da primeira campanha pausada, reduzindo o risco de criar objetos com ativos incorretos ou conta restrita.
