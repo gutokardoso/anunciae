@@ -1,4 +1,4 @@
-# Anunciaê! v35
+# Anunciaê! v36
 
 ## Nova Home comercial
 
@@ -92,7 +92,7 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - O resultado fica registrado na integração apenas como último estado de validação.
 - Esta etapa é deliberadamente anterior à criação da primeira campanha pausada, reduzindo o risco de criar objetos com ativos incorretos ou conta restrita.
 
-## v35 — Refinamento visual multicanal
+## v36 — Refinamento visual multicanal
 - Estrutura comum de canais publicitários: Meta Ads, Google Ads, TikTok Ads, LinkedIn Ads e X Ads.
 - Conexões exibe os cinco canais de mídia sem simular autorização; somente Meta permanece funcional nesta etapa.
 - Criar anúncio ganhou a etapa Canais e permite selecionar um ou mais destinos.
