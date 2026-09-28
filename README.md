@@ -1,4 +1,4 @@
-# Anunciaê! v37
+# Anunciaê! v38
 
 ## Nova Home comercial
 
@@ -101,9 +101,17 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - A validação Meta v26.0 da v32 foi preservada integralmente.
 
 
-## Google Ads OAuth (v37)
+## Google Ads OAuth (v38)
 - OAuth Web real com callback `https://anunciae-production.up.railway.app/api/integrations/google/callback`.
 - Escopo `https://www.googleapis.com/auth/adwords`, acesso offline e refresh token criptografado em repouso.
-- Variáveis: `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` e `GOOGLE_ADS_DEVELOPER_TOKEN`.
+- Variáveis: `GOOGLE_CLIENT_ID` e `GOOGLE_CLIENT_SECRET`.
+- A consulta à Google Ads API usa o nível de acesso associado ao projeto Google Cloud/OAuth e não exige `GOOGLE_ADS_DEVELOPER_TOKEN`.
 - Lista contas acessíveis pela Google Ads API v25, permite selecionar/salvar a conta e desconectar/revogar a autorização.
 - Esta versão não cria nem publica campanhas no Google Ads.
+
+
+## v38 — Google Ads API
+- Remove a exigência legada de `GOOGLE_ADS_DEVELOPER_TOKEN`.
+- Mantém o OAuth e os tokens já persistidos.
+- Consulta contas acessíveis com Bearer OAuth e preserva a seleção de conta.
+- Nenhuma campanha é criada ou publicada nesta versão.
