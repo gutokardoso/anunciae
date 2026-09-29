@@ -1,4 +1,4 @@
-# Anunciaê! v40
+# Anunciaê! v41
 
 ## Nova Home comercial
 
@@ -125,3 +125,11 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 ## v40 — UX Google Ads e ícone LinkedIn
 - Ao salvar a seleção da conta Google Ads com sucesso, o modal fecha automaticamente e a tela de Conexões é atualizada.
 - O ícone do LinkedIn Ads agora é um SVG inline/autossuficiente, sem dependência de CDN externa e protegido contra estilos globais de stroke.
+
+
+## v41 — conexão oficial do X / X Ads
+- Adiciona OAuth 1.0a de três pernas para que cada cliente autorize a própria conta X.
+- Usa `X_CONSUMER_KEY` e `X_CONSUMER_SECRET` somente no servidor; tokens de usuário ficam criptografados no banco.
+- Adiciona consulta e seleção de contas no X Ads API v12 quando o App tiver acesso ao produto Ads API.
+- Se o OAuth comum estiver conectado mas o App ainda não tiver acesso ao X Ads API, a interface informa isso sem simular contas ou publicação.
+- Nenhuma campanha é criada ou publicada nesta etapa.
