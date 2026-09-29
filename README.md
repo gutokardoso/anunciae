@@ -1,4 +1,11 @@
-# Anunciaê! v41
+# Anunciaê! v42
+
+## v42 — correção do estado X Ads
+- Corrige persistência do OAuth do X para usuários antigos usando UPSERT.
+- Migra automaticamente linhas de integrações ausentes para usuários já existentes.
+- Separa visualmente OAuth autorizado, acesso ao X Ads API e conta X Ads selecionada.
+- Registra no metadata o resultado da última verificação do X Ads API sem expor tokens.
+
 
 ## Nova Home comercial
 
