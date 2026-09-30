@@ -1,6 +1,6 @@
-# Anunciaê! v43
+# Anunciaê! v44
 
-## v43 — X Ads MCP oficial (OAuth 2.0, leitura segura)
+## v44 — X Ads MCP oficial (OAuth 2.0, leitura segura)
 - Corrige persistência do OAuth do X para usuários antigos usando UPSERT.
 - Migra automaticamente linhas de integrações ausentes para usuários já existentes.
 - Separa visualmente OAuth autorizado, acesso ao X Ads API e conta X Ads selecionada.
@@ -146,4 +146,4 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - Usa o endpoint remoto `https://ads-api.x.com/mcp`.
 - OAuth 2.0 com PKCE e escopos `ads.read offline.access`.
 - Requer `X_CLIENT_ID` e `X_CLIENT_SECRET` no Railway.
-- A v43 não solicita `ads.write` e não cria/publica campanhas no X.
+- A v44 não solicita `ads.write` e não cria/publica campanhas no X.
