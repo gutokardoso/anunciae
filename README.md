@@ -1,6 +1,6 @@
-# Anunciaê! v42
+# Anunciaê! v43
 
-## v42 — correção do estado X Ads
+## v43 — X Ads MCP oficial (OAuth 2.0, leitura segura)
 - Corrige persistência do OAuth do X para usuários antigos usando UPSERT.
 - Migra automaticamente linhas de integrações ausentes para usuários já existentes.
 - Separa visualmente OAuth autorizado, acesso ao X Ads API e conta X Ads selecionada.
@@ -135,8 +135,15 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 
 
 ## v41 — conexão oficial do X / X Ads
-- Adiciona OAuth 1.0a de três pernas para que cada cliente autorize a própria conta X.
-- Usa `X_CONSUMER_KEY` e `X_CONSUMER_SECRET` somente no servidor; tokens de usuário ficam criptografados no banco.
+- Usa OAuth 2.0 com PKCE para que cada cliente autorize o X Ads MCP em modo somente leitura.
+- Usa `X_CLIENT_ID` e `X_CLIENT_SECRET` somente no servidor; tokens OAuth 2.0 ficam criptografados no banco.
 - Adiciona consulta e seleção de contas no X Ads API v12 quando o App tiver acesso ao produto Ads API.
 - Se o OAuth comum estiver conectado mas o App ainda não tiver acesso ao X Ads API, a interface informa isso sem simular contas ou publicação.
 - Nenhuma campanha é criada ou publicada nesta etapa.
+
+
+### X Ads MCP
+- Usa o endpoint remoto `https://ads-api.x.com/mcp`.
+- OAuth 2.0 com PKCE e escopos `ads.read offline.access`.
+- Requer `X_CLIENT_ID` e `X_CLIENT_SECRET` no Railway.
+- A v43 não solicita `ads.write` e não cria/publica campanhas no X.
