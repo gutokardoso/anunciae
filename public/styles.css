@@ -27,7 +27,7 @@ body.appBooting header,body.appBooting main,body.appBooting footer{visibility:hi
 .adPreviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.adPreview{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.adPreview.selected{border-color:var(--teal);box-shadow:0 0 0 2px rgba(36,54,245,.12)}.adPreviewMedia{aspect-ratio:1;background:#f2f4f7;overflow:hidden}.adPreviewMedia img{width:100%;height:100%;object-fit:cover}.adPreviewBody{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}.adPreviewBody>small{color:var(--teal);font-size:10px;letter-spacing:.5px}.adPreviewBody>strong{font-size:17px;line-height:1.25}.adPreviewBody>p{font-size:13px;line-height:1.45;margin:0;color:#344054}.adMeta{border-top:1px solid var(--line);padding-top:9px;display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:10px}.creativeActions{display:grid;gap:7px;margin-top:auto;padding-top:6px}.creativeActions button{width:100%;font-size:12px}.approved{border:1px solid var(--teal);background:#eaf7f5;color:#075e57;border-radius:10px;padding:10px;font-weight:700}.aiDetails{margin-top:16px;border:1px solid var(--line);border-radius:14px;padding:0 16px}.aiDetails summary{cursor:pointer;padding:15px 0;font-weight:700}.aiDetails .aiGrid{padding-bottom:14px}.referenceImageList{display:flex;gap:9px;flex-wrap:wrap}.referenceImageList span{position:relative;width:76px;height:76px;border:1px solid var(--line);border-radius:11px;overflow:hidden}.referenceImageList img{width:100%;height:100%;object-fit:cover}.referenceImageList button{position:absolute;right:3px;top:3px;width:22px;height:22px;border:0;border-radius:50%;background:#fff;box-shadow:0 1px 5px #0003;cursor:pointer}
 @media(max-width:900px){.adPreviewGrid{grid-template-columns:1fr}.modalDialog:has(.aiPlan){width:min(720px,100%)}}
 /* v31 — padrão visual de ações */
-:root{--action:#2436F5;--action-hover:#006b7a}
+:root{--action:#2436F5;--action-hover:#2436F5}
 .primary,.actionImportant{background:var(--action);color:#fff;border:1px solid var(--action);border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}
 .primary:hover,.actionImportant:hover{background:var(--action-hover);border-color:var(--action-hover)}
 .adActions{gap:14px;align-items:center}
@@ -200,3 +200,11 @@ body.homeHeaderScrolled:has(#public.active) header #logout:hover{background:#fff
 .highlightCompare li:before{color:var(--home-blue)!important}
 .showcaseSection .sectionIntro{text-align:center;margin-left:auto;margin-right:auto}
 .sampleCopy button{background:#E5E7EB!important;color:var(--home-ink)!important;border:1px solid #D1D5DB!important}
+
+/* Public.IA v50 — refinamentos solicitados da identidade */
+.highlightCompare .compareBadge{background:transparent!important;color:var(--home-ink)!important;padding-left:0!important;padding-right:0!important}
+.highlightCompare h3{color:var(--home-blue)!important}
+.threeSteps article>span{background:var(--home-yellow)!important;color:var(--home-blue)!important}
+.primary:hover,.actionImportant:hover{background:var(--publicia-cobalt)!important;border-color:var(--publicia-cobalt)!important}
+.pricingGrid .featuredPlan .primary:hover,.brandBrainCopy .primary:hover{background:var(--publicia-cobalt)!important;border-color:var(--publicia-cobalt)!important}
+.footerBrand{color:var(--publicia-cobalt)!important}
