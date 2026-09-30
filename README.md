@@ -1,4 +1,12 @@
-# Anunciaê! v44
+# Anunciaê! v45
+
+## v45 — LinkedIn Ads OAuth real (leitura segura)
+- Ativa OAuth 2.0 individual por usuário para LinkedIn Advertising API.
+- Solicita somente `r_ads` nesta etapa; não cria, altera nem publica campanhas.
+- Descobre contas Ads do membro autenticado por `adAccountUsers?q=authenticatedUser`.
+- Permite selecionar e persistir a conta LinkedIn Ads por usuário.
+- Mantém Meta, Google e X Ads existentes.
+- No Development Tier, a conta Ads precisa estar mapeada ao aplicativo no Developer Portal.
 
 ## v44 — X Ads MCP oficial (OAuth 2.0, leitura segura)
 - Corrige persistência do OAuth do X para usuários antigos usando UPSERT.
