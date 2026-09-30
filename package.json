@@ -1,1 +1,1 @@
-{"name":"anunciae-v43","version":"43.0.0","private":true,"scripts":{"start":"node server.js","test":"node tests/smoke.test.js"},"engines":{"node":">=20"},"dependencies":{"pg":"^8.13.1"}}
+{"name":"anunciae-v42","version":"42.0.0","private":true,"scripts":{"start":"node server.js","test":"node tests/smoke.test.js"},"engines":{"node":">=20"},"dependencies":{"pg":"^8.13.1"}}

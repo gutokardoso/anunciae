@@ -1,6 +1,6 @@
-# Anunciaê! v43
+# Anunciaê! v42
 
-## v43 — nova identidade visual da página inicial
+## v42 — correção do estado X Ads
 - Corrige persistência do OAuth do X para usuários antigos usando UPSERT.
 - Migra automaticamente linhas de integrações ausentes para usuários já existentes.
 - Separa visualmente OAuth autorizado, acesso ao X Ads API e conta X Ads selecionada.
