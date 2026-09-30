@@ -1,1 +1,1 @@
-{"name":"publicia-v54","version": "54.0.0","private":true,"scripts":{"start":"node server.js","test":"node tests/smoke.test.js"},"engines":{"node":">=20"},"dependencies":{"pg":"^8.13.1"}}
+{"name":"publicia-v55","version": "55.0.0","private":true,"scripts":{"start":"node server.js","test":"node tests/smoke.test.js"},"engines":{"node":">=20"},"dependencies":{"pg":"^8.13.1"}}
