@@ -208,3 +208,20 @@ body.homeHeaderScrolled:has(#public.active) header #logout:hover{background:#fff
 .primary:hover,.actionImportant:hover{background:var(--publicia-cobalt)!important;border-color:var(--publicia-cobalt)!important}
 .pricingGrid .featuredPlan .primary:hover,.brandBrainCopy .primary:hover{background:var(--publicia-cobalt)!important;border-color:var(--publicia-cobalt)!important}
 .footerBrand{color:var(--publicia-cobalt)!important}
+
+
+/* Public.IA v51 — ajustes solicitados */
+/* Em fundos claros, as três linhas do símbolo usam Cobalto; a bolinha permanece Sol. */
+body:not(:has(#public.active)) .publiciaLogo svg{color:var(--publicia-cobalt)!important}
+body.homeHeaderScrolled:has(#public.active) header .publiciaLogo svg{color:var(--publicia-cobalt)!important}
+body:not(:has(#public.active)) .publiciaLogo svg circle,
+body.homeHeaderScrolled:has(#public.active) header .publiciaLogo svg circle{fill:var(--publicia-sun)!important}
+/* CTAs Sol: estado normal e hover mais escuro, inclusive sobre o hero Cobalto. */
+body:has(#public.active) header #registerAccess,
+.commercialHero .homeCta,
+.finalCommercialCta .primary,
+.pricingGrid .featuredPlan .primary{background:var(--publicia-sun)!important;border-color:var(--publicia-sun)!important;color:var(--publicia-ink)!important}
+body:has(#public.active) header #registerAccess:hover,
+.commercialHero .homeCta:hover,
+.finalCommercialCta .primary:hover,
+.pricingGrid .featuredPlan .primary:hover{background:#E3A900!important;border-color:#E3A900!important;color:var(--publicia-ink)!important}
