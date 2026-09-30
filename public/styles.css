@@ -191,3 +191,12 @@ body.homeHeaderScrolled:has(#public.active) header #panelAccess,
 body.homeHeaderScrolled:has(#public.active) header #logout{background:transparent!important;border:1px solid #D7DCE8!important;color:var(--publicia-ink)!important;box-shadow:none!important}
 body.homeHeaderScrolled:has(#public.active) header #panelAccess:hover,
 body.homeHeaderScrolled:has(#public.active) header #logout:hover{background:#fff!important;border-color:#C7CDDB!important}
+
+/* Public.IA v49 — ajustes finais da Home */
+.mutedCompare li{text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:currentColor}
+.highlightCompare{background:var(--home-yellow)!important;border-color:var(--home-yellow)!important;color:var(--home-ink)!important}
+.highlightCompare .compareBadge{background:var(--home-ink)!important;color:#fff!important}
+.highlightCompare h3,.highlightCompare li{color:var(--home-ink)!important}
+.highlightCompare li:before{color:var(--home-blue)!important}
+.showcaseSection .sectionIntro{text-align:center;margin-left:auto;margin-right:auto}
+.sampleCopy button{background:#E5E7EB!important;color:var(--home-ink)!important;border:1px solid #D1D5DB!important}
