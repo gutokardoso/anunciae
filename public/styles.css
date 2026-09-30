@@ -226,10 +226,21 @@ body:has(#public.active) header #registerAccess:hover,
 .finalCommercialCta .primary:hover,
 .pricingGrid .featuredPlan .primary:hover{background:#E3A900!important;border-color:#E3A900!important;color:var(--publicia-ink)!important}
 
-/* Public.IA v52 — canais oficiais e destaque Sol */
+/* Public.IA v53 — canais oficiais e destaque Sol */
 .channelLogoStrip{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;max-width:1100px;margin:10px auto 0;padding:26px 18px}
 .channelLogoItem{display:flex;align-items:center;gap:11px;min-height:52px}
 .channelLogoItem img{display:block;width:42px;height:42px;object-fit:contain}
 .channelLogoItem span{font-size:15px;font-weight:750;color:var(--ink);white-space:nowrap}
 .popularBadge{background:#FFC21A!important;color:var(--ink)!important;border-color:#FFC21A!important}
 @media(max-width:760px){.channelLogoStrip{gap:24px 30px}.channelLogoItem{width:calc(50% - 18px)}.channelLogoItem img{width:34px;height:34px}.channelLogoItem span{font-size:13px}}
+
+
+/* Public.IA v53 — banner de IA em largura total */
+.brandBrainBanner{position:relative;isolation:isolate;min-height:560px;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:max(24px,calc((100vw - 1132px)/2));padding-right:max(24px,calc((100vw - 1132px)/2));display:flex;align-items:center;background-image:linear-gradient(90deg,rgba(4,18,38,.88) 0%,rgba(4,18,38,.72) 31%,rgba(4,18,38,.18) 58%,rgba(4,18,38,0) 76%),url('/banner-ai.png');background-size:cover;background-position:center center;border-top:0;border-bottom:0}
+.brandBrainBanner .brandBrainCopy{position:relative;z-index:1;max-width:520px}
+.brandBrainBanner .brandBrainCopy .eyebrow{color:var(--publicia-sun)}
+.brandBrainBanner .brandBrainCopy h2{color:#fff}
+.brandBrainBanner .brandBrainCopy p{color:#E8ECF5}
+.brandBrainBanner .brandBrainCopy .primary{background:var(--publicia-sun);border-color:var(--publicia-sun);color:var(--publicia-ink)}
+.brandBrainBanner .brandBrainCopy .primary:hover{background:#E3A900!important;border-color:#E3A900!important;color:var(--publicia-ink)!important}
+@media(max-width:760px){.brandBrainBanner{min-height:610px;margin-left:-16px;margin-right:-16px;padding-left:20px;padding-right:20px;background-position:62% center;background-image:linear-gradient(90deg,rgba(4,18,38,.94) 0%,rgba(4,18,38,.84) 48%,rgba(4,18,38,.35) 100%),url('/banner-ai.png')}}
