@@ -1,6 +1,13 @@
-# Anunciaê! v45
+# Public.IA v46
 
-## v45 — LinkedIn Ads OAuth real (leitura segura)
+### Identidade Public.IA
+- Nome comercial migrado de Anunciaê! para **Public.IA**.
+- Identidade oficial aplicada à Home e às áreas autenticadas: Cobalto `#2436F5`, Sol `#FFC21A`, Tinta `#0E1330`, Névoa `#F1F3FF`.
+- Tipografia: Quicksand em marca/títulos/números e DM Sans em interface/textos.
+- O conteúdo comercial e a estrutura funcional da Home v45 foram preservados; a referência visual enviada foi usada como direção de estilo.
+- Callbacks OAuth e sais criptográficos existentes foram preservados nesta versão para não interromper integrações/tokens durante a migração de domínio.
+
+## v46 — Identidade Public.IA + base v45 — LinkedIn Ads OAuth real (leitura segura)
 - Ativa OAuth 2.0 individual por usuário para LinkedIn Advertising API.
 - Solicita somente `r_ads` nesta etapa; não cria, altera nem publica campanhas.
 - Descobre contas Ads do membro autenticado por `adAccountUsers?q=authenticatedUser`.
