@@ -1,4 +1,4 @@
-# Public.IA v47
+# Public.IA v48
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -7,7 +7,7 @@
 - O conteúdo comercial e a estrutura funcional da Home v45 foram preservados; a referência visual enviada foi usada como direção de estilo.
 - Callbacks OAuth e sais criptográficos existentes foram preservados nesta versão para não interromper integrações/tokens durante a migração de domínio.
 
-## v47 — Identidade Public.IA + base v45 — LinkedIn Ads OAuth real (leitura segura)
+## v48 — Identidade Public.IA + base v45 — LinkedIn Ads OAuth real (leitura segura)
 - Ativa OAuth 2.0 individual por usuário para LinkedIn Advertising API.
 - Solicita somente `r_ads` nesta etapa; não cria, altera nem publica campanhas.
 - Descobre contas Ads do membro autenticado por `adAccountUsers?q=authenticatedUser`.

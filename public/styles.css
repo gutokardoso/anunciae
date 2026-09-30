@@ -175,3 +175,19 @@ body:not(:has(#public.active)) .publiciaLogo svg{color:var(--publicia-ink)}
 body:not(:has(#public.active)) .publiciaLogo svg circle{fill:var(--publicia-sun)}
 body:not(:has(#public.active)) .publiciaWord b{color:var(--publicia-sun)}
 @media(max-width:760px){body:has(#public.active) header{background:var(--publicia-cobalt)}body:has(#public.active) .headActions{margin-left:auto}body:has(#public.active) .commercialHero{padding-top:34px}}
+
+/* v48 — header da home integrado ao hero e sticky na rolagem */
+body:has(#public.active) header{position:sticky;top:0;z-index:50;transition:background .22s ease,border-color .22s ease,box-shadow .22s ease,color .22s ease}
+body:has(#public.active):not(.homeHeaderScrolled) header #panelAccess,
+body:has(#public.active):not(.homeHeaderScrolled) header #logout{background:transparent!important;border:1px solid rgba(255,255,255,.82)!important;color:#fff!important;box-shadow:none!important}
+body:has(#public.active):not(.homeHeaderScrolled) header #panelAccess:hover,
+body:has(#public.active):not(.homeHeaderScrolled) header #logout:hover{background:rgba(255,255,255,.08)!important;border-color:#fff!important}
+body.homeHeaderScrolled:has(#public.active) header{background:#F7F8FC;border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(14,19,48,.04);color:var(--publicia-ink)}
+body.homeHeaderScrolled:has(#public.active) header .brand{color:var(--publicia-ink)}
+body.homeHeaderScrolled:has(#public.active) header .publiciaLogo svg{color:var(--publicia-ink)}
+body.homeHeaderScrolled:has(#public.active) header .publiciaLogo svg circle{fill:var(--publicia-sun)}
+body.homeHeaderScrolled:has(#public.active) header .publiciaWord b{color:var(--publicia-sun)}
+body.homeHeaderScrolled:has(#public.active) header #panelAccess,
+body.homeHeaderScrolled:has(#public.active) header #logout{background:transparent!important;border:1px solid #D7DCE8!important;color:var(--publicia-ink)!important;box-shadow:none!important}
+body.homeHeaderScrolled:has(#public.active) header #panelAccess:hover,
+body.homeHeaderScrolled:has(#public.active) header #logout:hover{background:#fff!important;border-color:#C7CDDB!important}
