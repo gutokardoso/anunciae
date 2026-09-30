@@ -225,3 +225,11 @@ body:has(#public.active) header #registerAccess:hover,
 .commercialHero .homeCta:hover,
 .finalCommercialCta .primary:hover,
 .pricingGrid .featuredPlan .primary:hover{background:#E3A900!important;border-color:#E3A900!important;color:var(--publicia-ink)!important}
+
+/* Public.IA v52 — canais oficiais e destaque Sol */
+.channelLogoStrip{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;max-width:1100px;margin:10px auto 0;padding:26px 18px}
+.channelLogoItem{display:flex;align-items:center;gap:11px;min-height:52px}
+.channelLogoItem img{display:block;width:42px;height:42px;object-fit:contain}
+.channelLogoItem span{font-size:15px;font-weight:750;color:var(--ink);white-space:nowrap}
+.popularBadge{background:#FFC21A!important;color:var(--ink)!important;border-color:#FFC21A!important}
+@media(max-width:760px){.channelLogoStrip{gap:24px 30px}.channelLogoItem{width:calc(50% - 18px)}.channelLogoItem img{width:34px;height:34px}.channelLogoItem span{font-size:13px}}
