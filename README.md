@@ -1,4 +1,4 @@
-# Public.IA v58
+# Public.IA v59
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -170,3 +170,7 @@ Página pública disponível em `/privacidade` e `/politica-de-privacidade`, inc
 
 ## Termos de Serviço
 Página pública disponível em `/termos` e `/termos-de-servico`, com regras de uso, integrações, campanhas, investimento, IA, conteúdo, planos, disponibilidade, privacidade e responsabilidades.
+
+
+## Exclusão de dados do usuário
+Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruções claras para solicitar a exclusão dos dados associados à conta PublicIA e às integrações autorizadas.
