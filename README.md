@@ -1,4 +1,4 @@
-# Public.IA v55
+# Public.IA v56
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -162,3 +162,7 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 - OAuth 2.0 com PKCE e escopos `ads.read offline.access`.
 - Requer `X_CLIENT_ID` e `X_CLIENT_SECRET` no Railway.
 - A v44 não solicita `ads.write` e não cria/publica campanhas no X.
+
+
+## Política de Privacidade
+Página pública disponível em `/privacidade` e `/politica-de-privacidade`, incluindo seção de direitos e solicitação de exclusão de dados.
