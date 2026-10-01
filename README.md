@@ -1,4 +1,4 @@
-# Public.IA v57
+# Public.IA v58
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -166,3 +166,7 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 
 ## Política de Privacidade
 Página pública disponível em `/privacidade` e `/politica-de-privacidade`, incluindo seção de direitos e solicitação de exclusão de dados.
+
+
+## Termos de Serviço
+Página pública disponível em `/termos` e `/termos-de-servico`, com regras de uso, integrações, campanhas, investimento, IA, conteúdo, planos, disponibilidade, privacidade e responsabilidades.
