@@ -1,4 +1,4 @@
-# Public.IA v71
+# Public.IA v72
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -241,6 +241,12 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Preserva os callbacks legados das demais integrações enquanto suas URLs `publicia.com.br` não forem confirmadas nos respectivos portais, evitando quebrar Meta, Google, TikTok ou X.
 - Preserva os sais criptográficos legados `anunciae-*` para manter compatibilidade com tokens já armazenados.
 
+
+## v72
+- Corrige a criação do rascunho de homologação do LinkedIn Ads adicionando `runSchedule` ao Campaign Group e à Campaign.
+- Usa a mesma janela segura de 7 dias, iniciando no dia seguinte, nas duas estruturas.
+- Mantém Campaign Group e Campaign em `DRAFT`, sem ativação ou veiculação.
+- Mantém o callback oficial do LinkedIn em `https://publicia.com.br/api/integrations/linkedin/callback`.
 
 ## v71
 
