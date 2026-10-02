@@ -1,4 +1,4 @@
-# Public.IA v76
+# Public.IA v77
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -275,12 +275,12 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Nenhuma publicação real nova foi habilitada; o teste multicanal continua aguardando as aprovações externas.
 
 
-## v76 — alinhamento das 7 etapas
+## v77 — alinhamento das 7 etapas
 - Mantém as 7 etapas do fluxo Criar anúncio lado a lado em telas desktop, corrigindo a quebra da etapa 7 Revisão.
 - Preserva o comportamento responsivo já existente em telas menores.
 - Nenhum fluxo de criação, publicação ou integração foi alterado.
 
-## v76 — inteligência operacional unificada
+## v77 — inteligência operacional unificada
 - Resultados consolidados por período (7/30/90 dias), com comparação automática ao período anterior.
 - KPIs derivados apenas de dados reais: CTR, CPC, CPM, custo por contato, custo por venda e ROAS.
 - Detalhamento por canal e por campanha, sem simulação de métricas.
