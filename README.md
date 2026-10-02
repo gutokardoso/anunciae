@@ -1,4 +1,4 @@
-# Public.IA v72
+# Public.IA v73
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -258,3 +258,9 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 ## v70
 - Corrige a detecção de `rw_ads` após reautorização do LinkedIn quando o endpoint de token não devolve `scope`.
 - Preserva a conta LinkedIn Ads selecionada durante a reautorização.
+
+
+## v73
+- Adiciona exclusão segura do rascunho de homologação do LinkedIn Ads.
+- Exclui primeiro a Campaign em `DRAFT` e depois o Campaign Group em `DRAFT`, conforme a Marketing API, sem ativação ou gasto.
+- Limpa o estado local somente após as exclusões retornarem sucesso, permitindo gravar novamente o fluxo criação → edição para a homologação.
