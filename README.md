@@ -1,4 +1,4 @@
-# Public.IA v64
+# Public.IA v65
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -209,3 +209,14 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Adiciona preflight central de publicação multicanal, sem escrita externa, para validar conexão/conta/adaptador por canal antes da futura publicação unificada.
 - Mantém a criação Google em pausa já existente e não habilita publicação real nos demais canais.
 - Mantém temporariamente o callback/fallback de produção já registrado em `anunciae-production.up.railway.app` e os sais criptográficos legados para não quebrar OAuth/tokens durante as análises externas. A migração para `publicia.com.br` será coordenada após as aprovações.
+
+
+## v65 — X Ads Standard API + base de Resultados/Autopilot
+- Migra o fluxo futuro do X Ads para o Standard Ads API aprovado, usando OAuth 1.0a de três etapas por anunciante, conforme a documentação oficial do X Ads API.
+- Usa `X_CONSUMER_KEY` e `X_CONSUMER_SECRET` já mantidos no Railway; tokens do anunciante ficam cifrados em repouso.
+- Mantém compatibilidade de leitura com conexões OAuth 2.0/MCP existentes apenas durante a migração. A interface pede uma única reconexão para ativar o Standard Ads API.
+- Consulta contas por `https://ads-api.x.com/<versão>/accounts` após OAuth 1.0a e permite persistir a conta selecionada.
+- O Standard Access fica marcado como pronto para leitura/gestão, porém `externalWritesEnabled=false`: nenhuma campanha X é criada, alterada, ativada ou publicada nesta versão.
+- O preflight multicanal reconhece o X Standard como preparado, mas bloqueado até a homologação multicanal final.
+- O painel deixa explícito que Resultados/Autopilot só exibem dados reais após campanhas publicadas e sincronizadas; não há métricas simuladas.
+- Mantém o sal criptográfico legado `anunciae-x-mcp-token` para conseguir ler tokens já persistidos durante a migração. Não alterar esse valor sem migração de dados.
