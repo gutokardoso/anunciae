@@ -1,4 +1,4 @@
-# Public.IA v59
+# Public.IA v60
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -174,3 +174,9 @@ Página pública disponível em `/termos` e `/termos-de-servico`, com regras de 
 
 ## Exclusão de dados do usuário
 Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruções claras para solicitar a exclusão dos dados associados à conta PublicIA e às integrações autorizadas.
+
+
+## v60 — validação segura de publicação Google Ads
+- Adiciona validação real de permissão de escrita via Google Ads API v25 usando `validateOnly=true`.
+- A validação não cria campanha, orçamento, anúncio ou cobrança.
+- Mantém a conta selecionada e o OAuth existentes.
