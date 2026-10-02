@@ -1,4 +1,4 @@
-# Public.IA v68
+# Public.IA v69
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -232,3 +232,11 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Adiciona estado do **Autopilot** baseado em campanhas efetivamente publicadas e métricas reais, mantendo `externalWritesEnabled=false`.
 - Mantém o preflight multicanal como porta única de validação antes da futura publicação coordenada em Meta, Google, TikTok, LinkedIn e X.
 - Nenhuma nova escrita externa é habilitada nesta versão; publicação e otimizações reais continuam bloqueadas até a homologação multicanal final.
+
+
+## v69
+
+- Migra o OAuth do LinkedIn Ads para o callback oficial `https://publicia.com.br/api/integrations/linkedin/callback`.
+- O LinkedIn deixa de herdar `PUBLIC_BASE_URL` legado do Railway; opcionalmente pode ser sobrescrito por `LINKEDIN_PUBLIC_BASE_URL`.
+- Preserva os callbacks legados das demais integrações enquanto suas URLs `publicia.com.br` não forem confirmadas nos respectivos portais, evitando quebrar Meta, Google, TikTok ou X.
+- Preserva os sais criptográficos legados `anunciae-*` para manter compatibilidade com tokens já armazenados.
