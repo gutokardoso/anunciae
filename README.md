@@ -1,4 +1,4 @@
-# Public.IA v66
+# Public.IA v67
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
