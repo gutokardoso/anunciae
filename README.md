@@ -220,3 +220,11 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - O preflight multicanal reconhece o X Standard como preparado, mas bloqueado até a homologação multicanal final.
 - O painel deixa explícito que Resultados/Autopilot só exibem dados reais após campanhas publicadas e sincronizadas; não há métricas simuladas.
 - Mantém o sal criptográfico legado `anunciae-x-mcp-token` para conseguir ler tokens já persistidos durante a migração. Não alterar esse valor sem migração de dados.
+
+
+## v67 — Resultados unificados + Autopilot seguro + orquestração preparada
+- Adiciona **Resultados** ao painel autenticado, consolidando somente registros reais de `campaign_results` por canal.
+- Exibe investimento, impressões, cliques, contatos, vendas e receita apenas quando existirem métricas sincronizadas; sem dados, mostra estado vazio explícito.
+- Adiciona estado do **Autopilot** baseado em campanhas efetivamente publicadas e métricas reais, mantendo `externalWritesEnabled=false`.
+- Mantém o preflight multicanal como porta única de validação antes da futura publicação coordenada em Meta, Google, TikTok, LinkedIn e X.
+- Nenhuma nova escrita externa é habilitada nesta versão; publicação e otimizações reais continuam bloqueadas até a homologação multicanal final.
