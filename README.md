@@ -1,4 +1,4 @@
-# Public.IA v63
+# Public.IA v64
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -201,3 +201,11 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 ## v63 — espaçamento do modal multicanal
 - Adiciona respiro lateral e inferior consistente ao conteúdo do modal de publicação multicanal.
 - Mantém a publicação real sem alterações: nenhum anúncio é disparado automaticamente.
+
+
+## v64 — TikTok preparado + preflight multicanal
+- Prepara OAuth do TikTok Marketing API sem simular conexão: callback, token cifrado, consulta e seleção de advertiser.
+- A conexão TikTok só é habilitada quando `TIKTOK_APP_ID`, `TIKTOK_APP_SECRET` e a URL oficial de autorização `TIKTOK_AUTH_URL` estiverem configuradas após aprovação do app.
+- Adiciona preflight central de publicação multicanal, sem escrita externa, para validar conexão/conta/adaptador por canal antes da futura publicação unificada.
+- Mantém a criação Google em pausa já existente e não habilita publicação real nos demais canais.
+- Mantém temporariamente o callback/fallback de produção já registrado em `anunciae-production.up.railway.app` e os sais criptográficos legados para não quebrar OAuth/tokens durante as análises externas. A migração para `publicia.com.br` será coordenada após as aprovações.
