@@ -1,4 +1,4 @@
-# Public.IA v67
+# Public.IA v68
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -221,6 +221,10 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - O painel deixa explícito que Resultados/Autopilot só exibem dados reais após campanhas publicadas e sincronizadas; não há métricas simuladas.
 - Mantém o sal criptográfico legado `anunciae-x-mcp-token` para conseguir ler tokens já persistidos durante a migração. Não alterar esse valor sem migração de dados.
 
+
+## v68
+- LinkedIn Ads: OAuth `rw_ads` para homologação, criação segura de campanha em `DRAFT` e edição controlada do rascunho, sem ativação nem gasto.
+- Fluxo visual em Conexões → LinkedIn Ads para o vídeo solicitado na análise do Standard Tier.
 
 ## v67 — Resultados unificados + Autopilot seguro + orquestração preparada
 - Adiciona **Resultados** ao painel autenticado, consolidando somente registros reais de `campaign_results` por canal.
