@@ -1,4 +1,4 @@
-# Public.IA v73
+# Public.IA v74
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -264,3 +264,12 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Adiciona exclusão segura do rascunho de homologação do LinkedIn Ads.
 - Exclui primeiro a Campaign em `DRAFT` e depois o Campaign Group em `DRAFT`, conforme a Marketing API, sem ativação ou gasto.
 - Limpa o estado local somente após as exclusões retornarem sucesso, permitindo gravar novamente o fluxo criação → edição para a homologação.
+
+
+## v74 — auditoria do fluxo + orquestração interna segura
+- Auditoria confirmou que o fluxo de criação em 7 etapas, publicação multicanal centralizada, Resultados e base segura do Autopilot já existiam na v73; não foram reconstruídos.
+- Adiciona plano interno de distribuição por canal, normalizando um único anúncio da PublicIA para as estruturas esperadas por Meta, Google, TikTok, LinkedIn e X, sem executar escrita externa.
+- O modal central de publicação ganhou **Ver plano de distribuição**, mantendo `externalWrites=false`.
+- **Meu painel** passa a consumir o mesmo resumo de métricas reais de Resultados, sem números simulados.
+- Corrige os marcadores visíveis do assistente de criação para 7 etapas e o rodapé para v74.
+- Nenhuma publicação real nova foi habilitada; o teste multicanal continua aguardando as aprovações externas.
