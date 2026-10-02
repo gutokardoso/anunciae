@@ -1,4 +1,4 @@
-# Public.IA v61
+# Public.IA v62
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -188,3 +188,11 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Campanha, grupo, anúncio e palavras-chave são criados em **PAUSA**; nenhum gasto é iniciado.
 - Persiste os resource names retornados pelo Google e bloqueia criação duplicada.
 - Segmentação Brasil é aplicada quando a campanha/empresa indica atuação nacional; demais segmentações serão ampliadas na próxima etapa.
+
+
+## v62 — publicação multicanal centralizada
+- Substitui o botão específico “Criar no Google (pausado)” por um único **Publicar anúncio**.
+- Depois da primeira publicação, o botão passa a **Gerenciar publicação**.
+- Novo modal reúne em uma única experiência todos os canais selecionados no anúncio e seus status.
+- Google Ads continua usando a criação real em pausa já validada na v61; canais ainda sem publicação automática aparecem de forma transparente como pendentes, sem criar botões separados.
+- Mantém a proposta da PublicIA: o usuário cria e gerencia um anúncio, e a plataforma centraliza a distribuição multicanal.
