@@ -1,4 +1,4 @@
-# Public.IA v70
+# Public.IA v71
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -240,6 +240,13 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - O LinkedIn deixa de herdar `PUBLIC_BASE_URL` legado do Railway; opcionalmente pode ser sobrescrito por `LINKEDIN_PUBLIC_BASE_URL`.
 - Preserva os callbacks legados das demais integrações enquanto suas URLs `publicia.com.br` não forem confirmadas nos respectivos portais, evitando quebrar Meta, Google, TikTok ou X.
 - Preserva os sais criptográficos legados `anunciae-*` para manter compatibilidade com tokens já armazenados.
+
+
+## v71
+
+- Corrige a persistência da autorização de gestão do LinkedIn: uma autorização OAuth concluída pelo fluxo que solicita `r_ads rw_ads` passa a registrar `rw_ads` mesmo quando o endpoint de token devolve apenas um subconjunto/omite scopes.
+- Quando existe exatamente uma conta LinkedIn Ads acessível e nenhuma seleção salva, a PublicIA seleciona e persiste essa conta automaticamente.
+- Mantém o callback oficial `https://publicia.com.br/api/integrations/linkedin/callback` e não publica nenhum anúncio automaticamente.
 
 
 ## v70
