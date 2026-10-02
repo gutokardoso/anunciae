@@ -1,4 +1,4 @@
-# Public.IA v74
+# Public.IA v75
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -273,3 +273,9 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - **Meu painel** passa a consumir o mesmo resumo de métricas reais de Resultados, sem números simulados.
 - Corrige os marcadores visíveis do assistente de criação para 7 etapas e o rodapé para v74.
 - Nenhuma publicação real nova foi habilitada; o teste multicanal continua aguardando as aprovações externas.
+
+
+## v75 — alinhamento das 7 etapas
+- Mantém as 7 etapas do fluxo Criar anúncio lado a lado em telas desktop, corrigindo a quebra da etapa 7 Revisão.
+- Preserva o comportamento responsivo já existente em telas menores.
+- Nenhum fluxo de criação, publicação ou integração foi alterado.
