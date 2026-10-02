@@ -1,4 +1,4 @@
-# Public.IA v60
+# Public.IA v61
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -180,3 +180,11 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Adiciona validação real de permissão de escrita via Google Ads API v25 usando `validateOnly=true`.
 - A validação não cria campanha, orçamento, anúncio ou cobrança.
 - Mantém a conta selecionada e o OAuth existentes.
+
+
+## v61 — primeira criação real no Google Ads, sempre pausada
+- Após escolher o criativo, campanhas com Google Ads selecionado exibem **Criar no Google (pausado)**.
+- Cria orçamento diário, campanha Search, grupo, anúncio responsivo e palavras-chave reais pela Google Ads API v25.
+- Campanha, grupo, anúncio e palavras-chave são criados em **PAUSA**; nenhum gasto é iniciado.
+- Persiste os resource names retornados pelo Google e bloqueia criação duplicada.
+- Segmentação Brasil é aplicada quando a campanha/empresa indica atuação nacional; demais segmentações serão ampliadas na próxima etapa.

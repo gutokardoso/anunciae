@@ -226,7 +226,7 @@ body:has(#public.active) header #registerAccess:hover,
 .finalCommercialCta .primary:hover,
 .pricingGrid .featuredPlan .primary:hover{background:#E3A900!important;border-color:#E3A900!important;color:var(--publicia-ink)!important}
 
-/* Public.IA v60 — canais oficiais e destaque Sol */
+/* Public.IA v61 — canais oficiais e destaque Sol */
 .channelLogoStrip{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;max-width:1100px;margin:10px auto 0;padding:26px 18px}
 .channelLogoItem{display:flex;align-items:center;gap:11px;min-height:52px}
 .channelLogoItem img{display:block;width:42px;height:42px;object-fit:contain}
@@ -260,3 +260,6 @@ body:has(#public.active) header #registerAccess:hover,
 .sampleVisualText strong{font-size:31px;line-height:1.02;margin-top:8px;font-weight:800}
 .sampleVisual.shop .sampleVisualText{color:#0E1330;text-shadow:0 1px 10px rgba(255,255,255,.35)}
 @media(max-width:760px){.sampleVisualText{left:22px;right:22px;bottom:24px}.sampleVisualText strong{font-size:29px}}
+
+/* v61 — publicação Google Ads controlada */
+.googlePausedBadge{display:inline-flex;align-items:center;padding:10px 12px;border-radius:10px;background:#eef7f2;color:#17643a;font-size:13px;font-weight:700;white-space:nowrap}
