@@ -266,3 +266,9 @@ body:has(#public.active) header #registerAccess:hover,
 
 /* v62 — publicação multicanal centralizada */
 .publicationManager{display:grid;gap:16px}.publicationIntro{background:#f5f6ff;border:1px solid var(--line);border-radius:14px;padding:16px}.publicationIntro strong{display:block;font-size:17px;margin-bottom:5px}.publicationIntro p{margin:0;color:var(--muted);line-height:1.5}.publicationChannels{display:grid;gap:10px}.publicationChannel{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fff}.publicationIdentity{display:flex;align-items:center;gap:12px}.publicationIdentity>span{display:grid;gap:3px}.publicationIdentity small{color:var(--muted)}.publicationChannel input[type=checkbox]{width:20px;height:20px;accent-color:#2436F5}.publicationStatus{font-size:12px;font-weight:700;border-radius:999px;padding:7px 10px;background:#f2f4f7;color:var(--muted);white-space:nowrap}.publicationChannel.paused .publicationStatus{background:#fff6df;color:#8a5b00}.publicationChannel.ready .publicationStatus{background:#eef7f2;color:#17643a}.publicationNotice{font-size:13px;color:var(--muted);line-height:1.5}.adActions .managePublication{white-space:nowrap}@media(max-width:760px){.publicationChannel{align-items:flex-start}.publicationStatus{white-space:normal;text-align:center}.adActions .managePublication{flex:1}}
+
+
+/* v63 — respiro interno do modal de publicação multicanal */
+.modalDialog:has(.publicationManager){width:min(820px,100%)}
+.publicationManager{padding:22px 26px 26px}
+@media(max-width:760px){.publicationManager{padding:18px}}

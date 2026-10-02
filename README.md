@@ -1,4 +1,4 @@
-# Public.IA v62
+# Public.IA v63
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -196,3 +196,8 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Novo modal reúne em uma única experiência todos os canais selecionados no anúncio e seus status.
 - Google Ads continua usando a criação real em pausa já validada na v61; canais ainda sem publicação automática aparecem de forma transparente como pendentes, sem criar botões separados.
 - Mantém a proposta da PublicIA: o usuário cria e gerencia um anúncio, e a plataforma centraliza a distribuição multicanal.
+
+
+## v63 — espaçamento do modal multicanal
+- Adiciona respiro lateral e inferior consistente ao conteúdo do modal de publicação multicanal.
+- Mantém a publicação real sem alterações: nenhum anúncio é disparado automaticamente.
