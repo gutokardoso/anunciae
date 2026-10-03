@@ -1,4 +1,4 @@
-# Public.IA v84
+# Public.IA v85
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -339,3 +339,12 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Força cada título a ocupar uma linha completa acima dos cards.
 - Adiciona versionamento de cache aos assets CSS/JS (`?v=84`) para garantir que o navegador carregue o layout novo após deploy.
 - Nenhuma integração ou regra funcional foi alterada.
+
+
+## v85 — Conversion Sources
+- Google Analytics 4 real via OAuth Google, seleção de propriedade e sincronização com Analytics Data API.
+- GA4 alimenta o Conversion Hub com key events e receita agregada, preservando origem/campaign ID quando disponível.
+- CRM e E-commerce viram hubs de conectores com catálogo preparado para HubSpot, RD Station, Pipedrive, Salesforce, Shopify, WooCommerce e Nuvemshop.
+- Adiciona Site / API PublicIA com chave própria para receber eventos de conversão server-side sem depender de terceiros.
+- Conversion Hub passa a suportar quantidade agregada de eventos sem criar milhares de linhas artificiais.
+- Nenhuma escrita em plataformas de anúncios é habilitada.
