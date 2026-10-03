@@ -1,4 +1,4 @@
-# Public.IA v80
+# Public.IA v81
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -309,3 +309,14 @@ O menu Minha empresa, Manual da marca e Concorrentes foi agrupado em Meu perfil.
 
 ## v80 — Data Hub
 Camada central de sincronização e normalização de métricas multicanal. Sincronização é somente leitura (`externalWrites=false`). Google e Meta possuem coletores reais; TikTok, LinkedIn e X usam o mesmo contrato e retornam estado explícito enquanto a API/permissão de métricas não estiver homologada. Inclui `data_sync_runs`, idempotência por campanha/canal/data, freshness no contexto da IA e preservação do payload bruto.
+
+
+## v81 — Conversion Hub + WhatsApp Business
+- Conexões separadas em Publicidade, Conversões e atendimento e Cobrança.
+- WhatsApp Business/Cloud API preparado com OAuth real, seleção de WABA/número e webhook assinado.
+- Conversion Hub normaliza eventos de conversa, lead, venda e receita sem armazenar conteúdo das mensagens.
+- Eventos recebidos pelo WhatsApp são deduplicados por ID externo e isolados por cliente.
+- O contexto global da IA recebe um resumo do Conversion Hub.
+- Click-to-WhatsApp continua sendo campanha Meta Ads; WhatsApp é destino/conversão, não sexto canal de mídia.
+- Variáveis: WHATSAPP_APP_ID, WHATSAPP_APP_SECRET, WHATSAPP_WEBHOOK_VERIFY_TOKEN. APP_ID/SECRET podem reutilizar META_APP_ID/META_APP_SECRET quando o mesmo app Meta possuir os produtos/permissões necessários.
+- Callback: /api/integrations/whatsapp/callback. Webhook: /api/integrations/whatsapp/webhook.
