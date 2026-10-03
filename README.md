@@ -1,4 +1,4 @@
-# Public.IA v78
+# Public.IA v79
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -301,3 +301,7 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - `/api/state` expõe assinatura e entitlements sanitizados; `/api/plans` expõe a matriz vigente.
 - Corrige o versionamento interno para 78.0.0.
 - Cobrança ainda não é simulada: `billingConnected=false` até a futura integração comercial.
+
+
+## v79 — Meu perfil e gestão da conta
+O menu Minha empresa, Manual da marca e Concorrentes foi agrupado em Meu perfil. O perfil exibe cadastro, plano e datas, permite alterar plano, trocar senha e excluir a própria conta com confirmação de senha. As regras de Entitlements da v78 foram preservadas.
