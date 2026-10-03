@@ -284,3 +284,9 @@ body:has(#public.active) header #registerAccess:hover,
 #integrations.connections{display:block}.connectionGroup{margin:0 0 28px}.connectionGroupHeader{font-size:14px;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);margin:0 0 10px;padding:0 2px}.connectionGroupCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.connectionsGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.connectionsGrid>.integrationCard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;justify-content:space-between;align-items:center;gap:14px;min-width:0}@media(max-width:760px){.connectionGroupCard{padding:12px}.connectionsGrid{grid-template-columns:1fr}}
 
 .integrationComingSoon{opacity:.92}.comingSoonBadge{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:12px;font-weight:700;color:var(--muted);background:#f7f8ff;white-space:nowrap}@media(max-width:760px){.comingSoonBadge{padding:6px 9px}}
+
+/* v84: Conexões — títulos sempre em linha própria acima dos cards */
+#integrations.connections .connectionGroup{display:block!important;width:100%!important;margin:0 0 28px!important}
+#integrations.connections .connectionGroupHeader{display:block!important;width:100%!important;margin:0 0 12px!important;padding:0 2px!important}
+#integrations.connections .connectionGroupCard{display:block!important;width:100%!important;margin:0!important;box-sizing:border-box!important}
+#integrations.connections .connectionsGrid{width:100%!important}

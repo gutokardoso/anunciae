@@ -1,4 +1,4 @@
-# Public.IA v83
+# Public.IA v84
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -332,3 +332,10 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 ## v83 — Alinhamento visual de Conexões
 - Move os títulos Publicidade, Conversões e atendimento e Dados e conversões para cima dos respectivos cards.
 - Mantém as caixas das integrações alinhadas na mesma grade e preserva o comportamento responsivo.
+
+
+## v84 — Correção definitiva do alinhamento em Conexões
+- Corrige a regressão visual em que os títulos dos grupos ainda podiam ocupar a coluna lateral por CSS em cache.
+- Força cada título a ocupar uma linha completa acima dos cards.
+- Adiciona versionamento de cache aos assets CSS/JS (`?v=84`) para garantir que o navegador carregue o layout novo após deploy.
+- Nenhuma integração ou regra funcional foi alterada.
