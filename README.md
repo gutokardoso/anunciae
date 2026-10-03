@@ -1,4 +1,4 @@
-# Public.IA v79
+# Public.IA v80
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -303,5 +303,9 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Cobrança ainda não é simulada: `billingConnected=false` até a futura integração comercial.
 
 
-## v79 — Meu perfil e gestão da conta
+## v80 — Meu perfil e gestão da conta
 O menu Minha empresa, Manual da marca e Concorrentes foi agrupado em Meu perfil. O perfil exibe cadastro, plano e datas, permite alterar plano, trocar senha e excluir a própria conta com confirmação de senha. As regras de Entitlements da v78 foram preservadas.
+
+
+## v80 — Data Hub
+Camada central de sincronização e normalização de métricas multicanal. Sincronização é somente leitura (`externalWrites=false`). Google e Meta possuem coletores reais; TikTok, LinkedIn e X usam o mesmo contrato e retornam estado explícito enquanto a API/permissão de métricas não estiver homologada. Inclui `data_sync_runs`, idempotência por campanha/canal/data, freshness no contexto da IA e preservação do payload bruto.
