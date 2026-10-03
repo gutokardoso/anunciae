@@ -1,4 +1,4 @@
-# Public.IA v81
+# Public.IA v82
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -312,7 +312,7 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 
 
 ## v81 — Conversion Hub + WhatsApp Business
-- Conexões separadas em Publicidade, Conversões e atendimento e Cobrança.
+- Conexões separadas em Publicidade e Conversões e atendimento. A cobrança da assinatura não aparece como conexão do cliente.
 - WhatsApp Business/Cloud API preparado com OAuth real, seleção de WABA/número e webhook assinado.
 - Conversion Hub normaliza eventos de conversa, lead, venda e receita sem armazenar conteúdo das mensagens.
 - Eventos recebidos pelo WhatsApp são deduplicados por ID externo e isolados por cliente.
@@ -320,3 +320,10 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Click-to-WhatsApp continua sendo campanha Meta Ads; WhatsApp é destino/conversão, não sexto canal de mídia.
 - Variáveis: WHATSAPP_APP_ID, WHATSAPP_APP_SECRET, WHATSAPP_WEBHOOK_VERIFY_TOKEN. APP_ID/SECRET podem reutilizar META_APP_ID/META_APP_SECRET quando o mesmo app Meta possuir os produtos/permissões necessários.
 - Callback: /api/integrations/whatsapp/callback. Webhook: /api/integrations/whatsapp/webhook.
+
+
+## v82 — Dados e conversões
+- Remove Cobrança/Pagamentos da tela Conexões: cobrança da assinatura é infraestrutura administrativa da PublicIA.
+- Adiciona a área Dados e conversões com Google Analytics 4, CRM e E-commerce.
+- Esses conectores aparecem como Em breve e não simulam autorização enquanto os adaptadores reais ainda não estiverem implementados.
+- Mantém WhatsApp Business em Conversões e atendimento e as cinco Ads APIs em Publicidade.
