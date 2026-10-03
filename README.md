@@ -1,4 +1,4 @@
-# Public.IA v77
+# Public.IA v78
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -289,3 +289,15 @@ Página pública disponível em `/exclusao-de-dados` e `/exclusao`, com instruç
 - Contexto unificado da IA (`/api/ai/context`): empresa, marca, campanhas, concorrentes, conexões sanitizadas, plano de distribuição, métricas, metas e histórico. Tokens e segredos nunca entram no contexto.
 - Análise global com IA (`/api/ai/analyze`) baseada somente nos dados reais disponíveis.
 - Guardrail mantido: análise ampla não equivale a permissão irrestrita de escrita. Ações externas continuam submetidas aos fluxos, limites e autorizações da plataforma; `externalWrites=false` nesta fase.
+
+
+## v78 — Planos e Entitlements
+- Cria uma camada central de entitlements para Iniciante (R$79), Intermediário (R$149) e PRO (R$299).
+- Limites reais no backend: até 2, 4 e 5 canais por anúncio, respectivamente.
+- Autopilot: Iniciante sem automação, Intermediário em recomendação e PRO com modo automático dentro dos limites autorizados.
+- Resultados respeitam o plano: histórico de 30 dias no Iniciante; comparação, detalhamento por campanha, metas e timeline a partir do Intermediário; PRO recebe o conjunto completo.
+- Novas contas entram no Iniciante. Contas existentes são preservadas como PRO durante a migração para evitar regressão de funcionalidades já disponíveis antes da v78.
+- Administração Geral passa a permitir alterar o plano comercial do usuário sem alterar OAuth, campanhas ou dados existentes.
+- `/api/state` expõe assinatura e entitlements sanitizados; `/api/plans` expõe a matriz vigente.
+- Corrige o versionamento interno para 78.0.0.
+- Cobrança ainda não é simulada: `billingConnected=false` até a futura integração comercial.
