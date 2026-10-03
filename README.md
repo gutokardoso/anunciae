@@ -1,4 +1,4 @@
-# Public.IA v82
+# Public.IA v83
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -327,3 +327,8 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Adiciona a área Dados e conversões com Google Analytics 4, CRM e E-commerce.
 - Esses conectores aparecem como Em breve e não simulam autorização enquanto os adaptadores reais ainda não estiverem implementados.
 - Mantém WhatsApp Business em Conversões e atendimento e as cinco Ads APIs em Publicidade.
+
+
+## v83 — Alinhamento visual de Conexões
+- Move os títulos Publicidade, Conversões e atendimento e Dados e conversões para cima dos respectivos cards.
+- Mantém as caixas das integrações alinhadas na mesma grade e preserva o comportamento responsivo.
