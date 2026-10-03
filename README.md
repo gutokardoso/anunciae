@@ -1,4 +1,4 @@
-# Public.IA v85
+# Public.IA v86
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -124,7 +124,7 @@ O token retornado pela Meta é armazenado cifrado com AES-256-GCM usando uma cha
 
 
 ## Google Ads OAuth (v40)
-- OAuth Web real com callback `https://anunciae-production.up.railway.app/api/integrations/google/callback`.
+- OAuth Web real com callback oficial `https://publicia.com.br/api/integrations/google/callback` quando `PUBLIC_BASE_URL=https://publicia.com.br`.
 - Escopo `https://www.googleapis.com/auth/adwords`, acesso offline e refresh token criptografado em repouso.
 - Variáveis: `GOOGLE_CLIENT_ID` e `GOOGLE_CLIENT_SECRET`.
 - A consulta à Google Ads API usa o nível de acesso associado ao projeto Google Cloud/OAuth e não exige `GOOGLE_ADS_DEVELOPER_TOKEN`.
@@ -348,3 +348,13 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Adiciona Site / API PublicIA com chave própria para receber eventos de conversão server-side sem depender de terceiros.
 - Conversion Hub passa a suportar quantidade agregada de eventos sem criar milhares de linhas artificiais.
 - Nenhuma escrita em plataformas de anúncios é habilitada.
+
+
+## v86 — GA4 auditado e preparado para produção
+- Auditoria da v85 confirmou que o fluxo GA4 já estava implementado: OAuth somente leitura, seleção de propriedade, Analytics Admin API, Analytics Data API e sincronização para o Conversion Hub.
+- Mantém o GA4 separado do Google Ads para não misturar permissões nem conexões de clientes.
+- Diagnóstico `/api/health` agora informa `ga4OAuthConfigured` e `ga4CallbackUrl`.
+- Teste dedicado valida OAuth GA4, escopo `analytics.readonly`, callback oficial e isolamento de estado.
+- Para produção com `PUBLIC_BASE_URL=https://publicia.com.br`, o URI OAuth que deve estar autorizado no Google Cloud é `https://publicia.com.br/api/integrations/ga4/callback`.
+- O callback do Google Ads continua sendo `https://publicia.com.br/api/integrations/google/callback`; os dois devem permanecer autorizados.
+- Nenhuma escrita no Google Analytics foi habilitada.
