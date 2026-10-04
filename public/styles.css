@@ -317,3 +317,6 @@ body:has(#public.active) header #registerAccess:hover,
 
 /* v91 — guia e teste seguro do Site/API PublicIA */
 .siteApiGuide{display:grid;gap:12px;padding:18px;border:1px solid #dfe3ff;border-radius:14px;background:#fafbff}.siteApiGuide h3,.siteApiGuide p{margin:0}.apiEndpoint{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #e1e4f5;border-radius:10px;background:#fff}.apiEndpoint code{flex:1;overflow-wrap:anywhere}.siteApiGuide pre{margin:0;padding:14px;border-radius:10px;background:#11162b;color:#fff;overflow:auto;white-space:pre-wrap}.siteApiGuide label{font-weight:700}.integrationTestOk{margin-top:10px;padding:10px 12px;border-radius:10px;background:#edf9f2;color:#176b3a;font-weight:600}.integrationTestError{margin-top:10px;padding:10px 12px;border-radius:10px;background:#fff1f1;color:#b42318;font-weight:600}@media(max-width:760px){.apiEndpoint{align-items:stretch;flex-direction:column}.apiEndpoint .secondary{width:100%}}
+
+.siteApiDeveloper{display:grid;gap:14px;padding:18px;border:1px solid #dfe3ff;border-radius:14px;background:#fafbff}.siteApiDeveloper h3{margin:0 0 6px}.siteApiDeveloper>.secondary{justify-self:start}.siteApiGuide[hidden]{display:none!important}.siteApiGuide{margin-top:2px}
+@media(max-width:760px){.siteApiDeveloper>.secondary{width:100%}}
