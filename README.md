@@ -1,4 +1,4 @@
-# Public.IA v90
+# Public.IA v91
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -371,3 +371,7 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Corrigido espaçamento interno do modal Site / API PublicIA e dos hubs CRM/E-commerce.
 - Mantido o espaçamento já existente nos demais modais para evitar regressões e padding duplicado.
 - Responsividade preservada com padding reduzido no mobile.
+
+
+## v91 — Site/API PublicIA
+- Guia de implementação e teste interno não contaminante do Conversion Hub.
