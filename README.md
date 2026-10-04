@@ -1,4 +1,4 @@
-# Public.IA v102
+# Public.IA v103
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -386,7 +386,7 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Vendas e receita continuam recomendadas via backend/API para confirmação confiável.
 
 
-## v102 — conversões confiáveis e privacidade por padrão
+## v103 — conversões confiáveis e privacidade por padrão
 - A Tag PublicIA registra somente fatos observáveis no navegador (visitas e conversas observáveis) e envia imediatamente ao servidor.
 - Removida a heurística de cadastro automático como fonte oficial de lead.
 - Leads, vendas e receita passam a exigir fonte confiável: CRM, e-commerce ou sistema comercial; meios de pagamento ficam opcionais.
