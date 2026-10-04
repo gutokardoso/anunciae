@@ -1,4 +1,4 @@
-# Public.IA v96
+# Public.IA v97
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -384,3 +384,9 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Site próprio recebe uma Tag PublicIA única para instalação inicial.
 - API avançada permanece opcional e recolhida.
 - Vendas e receita continuam recomendadas via backend/API para confirmação confiável.
+
+
+## v97 — detecção automática de cadastros pela Tag PublicIA
+- A Tag PublicIA passa a reconhecer cadastros concluídos em fluxos comuns de sites próprios sem exigir nova alteração no site do cliente.
+- A detecção observa apenas sinais técnicos de sucesso (rota/método/status, navegação e estado do formulário); não lê nem envia nome, e-mail, senha ou conteúdo dos campos.
+- Mantém a instalação única da Tag e preserva o rastreamento de pageviews e conversas.
