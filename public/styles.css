@@ -290,3 +290,10 @@ body:has(#public.active) header #registerAccess:hover,
 #integrations.connections .connectionGroupHeader{display:block!important;width:100%!important;margin:0 0 12px!important;padding:0 2px!important}
 #integrations.connections .connectionGroupCard{display:block!important;width:100%!important;margin:0!important;box-sizing:border-box!important}
 #integrations.connections .connectionsGrid{width:100%!important}
+
+/* v87 — padrão de respiro do modal GA4 */
+.modalDialog:has(.ga4Manager){width:min(820px,100%)}
+.ga4Manager{padding:24px 28px 28px}
+.ga4Manager>label{display:grid;gap:7px;font-size:13px;font-weight:700}
+.ga4Manager>label select{width:100%}
+@media(max-width:640px){.ga4Manager{padding:20px 18px}}

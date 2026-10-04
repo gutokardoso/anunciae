@@ -1,4 +1,4 @@
-# Public.IA v86
+# Public.IA v87
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -350,7 +350,7 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Nenhuma escrita em plataformas de anúncios é habilitada.
 
 
-## v86 — GA4 auditado e preparado para produção
+## v87 — GA4 auditado e preparado para produção
 - Auditoria da v85 confirmou que o fluxo GA4 já estava implementado: OAuth somente leitura, seleção de propriedade, Analytics Admin API, Analytics Data API e sincronização para o Conversion Hub.
 - Mantém o GA4 separado do Google Ads para não misturar permissões nem conexões de clientes.
 - Diagnóstico `/api/health` agora informa `ga4OAuthConfigured` e `ga4CallbackUrl`.
