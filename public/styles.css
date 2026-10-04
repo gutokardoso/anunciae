@@ -297,3 +297,12 @@ body:has(#public.active) header #registerAccess:hover,
 .ga4Manager>label{display:grid;gap:7px;font-size:13px;font-weight:700}
 .ga4Manager>label select{width:100%}
 @media(max-width:640px){.ga4Manager{padding:20px 18px}}
+
+
+/* v88 — notificações visuais da plataforma (substitui alert nativo no GA4) */
+.appToasts{position:fixed;top:22px;right:22px;z-index:10000;display:grid;gap:10px;width:min(390px,calc(100vw - 32px));pointer-events:none}
+.appToast{display:flex;align-items:flex-start;gap:11px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 14px 38px rgba(24,31,74,.16);font-size:14px;line-height:1.45;color:var(--text);opacity:0;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease}
+.appToast.show{opacity:1;transform:translateY(0)}
+.appToastIcon{flex:0 0 24px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:#eaf7ef;color:#17643a}
+.appToast.error .appToastIcon{background:#fff0f0;color:#a33}
+@media(max-width:640px){.appToasts{top:14px;right:16px;left:16px;width:auto}}
