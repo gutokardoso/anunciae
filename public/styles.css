@@ -306,3 +306,6 @@ body:has(#public.active) header #registerAccess:hover,
 .appToastIcon{flex:0 0 24px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:#eaf7ef;color:#17643a}
 .appToast.error .appToastIcon{background:#fff0f0;color:#a33}
 @media(max-width:640px){.appToasts{top:14px;right:16px;left:16px;width:auto}}
+
+/* v89 — Conversion Hub visível em Resultados */
+.conversionResultBlock{margin-top:18px;padding-top:18px;border-top:1px solid var(--line,#e5e7f2)}.conversionResultBlock h3{margin:0 0 12px}.conversionSources{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.conversionSources span{background:#f6f7ff;border:1px solid #e5e7f2;border-radius:10px;padding:8px 10px;font-size:12px}

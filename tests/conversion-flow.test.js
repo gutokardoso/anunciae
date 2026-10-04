@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('assert'),fs=require('fs'),path=require('path');
+const server=fs.readFileSync(path.join(__dirname,'..','server.js'),'utf8');
+const app=fs.readFileSync(path.join(__dirname,'..','public','app.js'),'utf8');
+assert(server.includes("'/api/conversions/site/events'"));
+assert(server.includes('conversionHub=await conversionSummary(userId,days)'));
+assert(server.includes('conversionTotals={pageviews:0,conversations:0,leads:0,sales:0,revenue:0}'));
+assert(app.includes('Conversões rastreadas'));
+assert(app.includes("cvNames={site:'Site / API',ga4:'Google Analytics 4',whatsapp:'WhatsApp Business'"));
+assert(app.includes('trackedContacts=Number(r.total.contacts||0)+Number(cv.leads||0)+Number(cv.conversations||0)'));
+console.log('conversion flow tests: ok');

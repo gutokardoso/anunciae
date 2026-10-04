@@ -19,5 +19,5 @@ assert(app.includes('openGa4Manager'));
 assert(app.includes('openConnectorHub'));
 assert(app.includes('openSiteApiManager'));
 assert(!app.includes("['ga4','Google Analytics 4','Em breve']"));
-assert(html.includes('v88'));
+assert(html.includes('v89'));
 console.log('conversion sources tests: ok');

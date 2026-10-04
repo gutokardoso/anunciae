@@ -1,4 +1,4 @@
-# Public.IA v88
+# Public.IA v89
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -358,3 +358,9 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Para produção com `PUBLIC_BASE_URL=https://publicia.com.br`, o URI OAuth que deve estar autorizado no Google Cloud é `https://publicia.com.br/api/integrations/ga4/callback`.
 - O callback do Google Ads continua sendo `https://publicia.com.br/api/integrations/google/callback`; os dois devem permanecer autorizados.
 - Nenhuma escrita no Google Analytics foi habilitada.
+
+
+## v89 — auditoria Conversion Hub
+- Mantém Site/API, GA4 e WhatsApp como fontes normalizadas do Conversion Hub.
+- Resultados passa a expor conversões rastreadas por fonte sem misturá-las silenciosamente às métricas de mídia.
+- Meu painel usa conversões reais do Conversion Hub quando disponíveis, preservando investimento apenas do Data Hub.
