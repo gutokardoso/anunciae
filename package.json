@@ -1,10 +1,10 @@
 {
-  "name": "publicia-v98",
-  "version": "98.0.0",
+  "name": "publicia-v99",
+  "version": "99.0.0",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "test": "node tests/smoke.test.js && node tests/profile.test.js && node tests/datahub.test.js && node tests/conversionhub.test.js && node tests/conversion-sources.test.js && node tests/ga4.test.js && node tests/conversion-flow.test.js && node tests/modal-spacing.test.js && node tests/siteapi-guide.test.js && node tests/siteapi-runtime.test.js && node tests/site-tag.test.js && node tests/site-onboarding-v98.test.js && node tests/site-tag-crossorigin.test.js && node tests/site-tag-lead-autodetect.test.js && node tests/site-tag-navigation-lead.test.js"
+    "test": "node tests/smoke.test.js && node tests/profile.test.js && node tests/datahub.test.js && node tests/conversionhub.test.js && node tests/conversion-sources.test.js && node tests/ga4.test.js && node tests/conversion-flow.test.js && node tests/modal-spacing.test.js && node tests/siteapi-guide.test.js && node tests/siteapi-runtime.test.js && node tests/site-tag.test.js && node tests/site-onboarding-v99.test.js && node tests/site-tag-crossorigin.test.js && node tests/trusted-conversion-architecture.test.js"
   },
   "engines": {
     "node": ">=20"

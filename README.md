@@ -1,4 +1,4 @@
-# Public.IA v98
+# Public.IA v99
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -386,10 +386,8 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Vendas e receita continuam recomendadas via backend/API para confirmação confiável.
 
 
-## v98 — detecção automática de cadastros pela Tag PublicIA
-- A Tag PublicIA passa a reconhecer cadastros concluídos em fluxos comuns de sites próprios sem exigir nova alteração no site do cliente.
-- A detecção observa apenas sinais técnicos de sucesso (rota/método/status, navegação e estado do formulário); não lê nem envia nome, e-mail, senha ou conteúdo dos campos.
-- Mantém a instalação única da Tag e preserva o rastreamento de pageviews e conversas.
-
-## v98 — cadastro em navegação tradicional e SPA
-A Tag PublicIA preserva temporariamente apenas um sinal local de tentativa de cadastro (sem valores de campos) e confirma o lead quando há navegação observável após o envio, cobrindo formulários que descarregam a página antes do detector assíncrono da v97. Também observa navegação SPA via History API.
+## v99 — conversões confiáveis e privacidade por padrão
+- A Tag PublicIA registra somente fatos observáveis no navegador (visitas e conversas observáveis) e envia imediatamente ao servidor.
+- Removida a heurística de cadastro automático como fonte oficial de lead.
+- Leads, vendas e receita passam a exigir fonte confiável: CRM, e-commerce ou sistema comercial; meios de pagamento ficam opcionais.
+- A interface explica a origem/confiabilidade dos dados e a política de minimização: credenciais, senhas, cartão, saldo e extrato não são dados de análise da IA.

@@ -25,5 +25,5 @@ assert(server.includes("'/api/integrations/siteapi/settings'"));
 assert(server.includes('selectedEvents'));
 assert(server.includes('Este tipo de evento não está habilitado'));
 assert(!app.includes("['ga4','Google Analytics 4','Em breve']"));
-assert(html.includes('v98'));
+assert(html.includes('v99'));
 console.log('conversion sources tests: ok');
