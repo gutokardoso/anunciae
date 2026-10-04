@@ -1,22 +1,15 @@
 {
-  "name": "ihviajei",
-  "version": "162.0.0",
+  "name": "publicia-v96",
+  "version": "96.0.0",
   "private": true,
-  "description": "Ih, viajei! — Sua viagem na palma da mão.",
   "scripts": {
     "start": "node server.js",
-    "migrate:postgres": "node scripts/migrate-postgres.js",
-    "postgres:check": "node scripts/check-postgres.js",
-    "restore:postgres": "node scripts/restore-postgres.js",
-    "backup:postgres": "node scripts/backup-postgres.js"
+    "test": "node tests/smoke.test.js && node tests/profile.test.js && node tests/datahub.test.js && node tests/conversionhub.test.js && node tests/conversion-sources.test.js && node tests/ga4.test.js && node tests/conversion-flow.test.js && node tests/modal-spacing.test.js && node tests/siteapi-guide.test.js && node tests/siteapi-runtime.test.js && node tests/site-tag.test.js && node tests/site-onboarding-v96.test.js && node tests/site-tag-crossorigin.test.js"
   },
   "engines": {
-    "node": ">=22.5.0"
+    "node": ">=20"
   },
   "dependencies": {
-    "pg": "^8.16.3",
-    "web-push": "^3.6.7",
-    "google-auth-library": "^9.15.1",
-    "passkit-generator": "^3.4.0"
+    "pg": "^8.13.1"
   }
 }
