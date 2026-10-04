@@ -1,4 +1,4 @@
-# Public.IA v91
+# Public.IA v94
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -375,3 +375,12 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 
 ## v91 — Site/API PublicIA
 - Guia de implementação e teste interno não contaminante do Conversion Hub.
+
+
+## v94 — Tag PublicIA e instalação simples
+- Corrige a referência principal do README para v94.
+- Dados do seu site passa a gerar uma identificação/tag única por cliente.
+- Usuário escolhe eventos e plataforma antes da instalação.
+- Site próprio recebe uma Tag PublicIA única para instalação inicial.
+- API avançada permanece opcional e recolhida.
+- Vendas e receita continuam recomendadas via backend/API para confirmação confiável.
