@@ -1,10 +1,10 @@
 {
-  "name": "publicia-v104",
-  "version": "104.0.0",
+  "name": "publicia-v105",
+  "version": "105.0.0",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "test": "node tests/smoke.test.js && node tests/profile.test.js && node tests/datahub.test.js && node tests/conversionhub.test.js && node tests/conversion-sources.test.js && node tests/ga4.test.js && node tests/conversion-flow.test.js && node tests/modal-spacing.test.js && node tests/siteapi-guide.test.js && node tests/siteapi-runtime.test.js && node tests/site-tag.test.js && node tests/site-onboarding-v100.test.js && node tests/site-tag-crossorigin.test.js && node tests/trusted-conversion-architecture.test.js && node tests/trusted-lead-sources-v104.test.js && node tests/trusted-lead-selector-v104.test.js && node tests/custom-system-v104.test.js && node tests/developer-handoff-v104.test.js"
+    "test": "node tests/smoke.test.js && node tests/profile.test.js && node tests/datahub.test.js && node tests/conversionhub.test.js && node tests/conversion-sources.test.js && node tests/ga4.test.js && node tests/conversion-flow.test.js && node tests/modal-spacing.test.js && node tests/siteapi-guide.test.js && node tests/siteapi-runtime.test.js && node tests/site-tag.test.js && node tests/site-onboarding-v100.test.js && node tests/site-tag-crossorigin.test.js && node tests/trusted-conversion-architecture.test.js && node tests/trusted-lead-sources-v105.test.js && node tests/trusted-lead-selector-v105.test.js && node tests/custom-system-v105.test.js && node tests/developer-handoff-v105.test.js"
   },
   "engines": {
     "node": ">=20"

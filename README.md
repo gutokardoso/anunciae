@@ -1,4 +1,4 @@
-# Public.IA v104
+# Public.IA v105
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -393,9 +393,16 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - A interface explica a origem/confiabilidade dos dados e a política de minimização: credenciais, senhas, cartão, saldo e extrato não são dados de análise da IA.
 
 
-## v104 — entrega da integração ao responsável técnico
+## v105 — entrega da integração ao responsável técnico
 - Sistema próprio passa a priorizar uma experiência adequada ao cliente leigo.
 - Endpoint e JSON ficam recolhidos em “Ver detalhes técnicos”.
 - Adicionado “Copiar instruções para o desenvolvedor”, com endpoint, autenticação, eventos aceitos, campos mínimos, exemplo e regras de segurança.
 - A chave continua sendo gerada uma única vez e deve permanecer somente no servidor do cliente.
 - A PublicIA não precisa acessar nem alterar o código do cliente; o responsável técnico implementa o protocolo oficial uma única vez.
+
+## v105 — Sistema próprio com UX enxuta
+- O cliente não precisa mais lidar separadamente com chave, endpoint, JSON e variável de ambiente.
+- A PublicIA apresenta uma única ação: “Gerar pacote de instalação”.
+- O pacote reúne credencial server-side, endpoint, autenticação, eventos e regras para o responsável técnico instalar uma única vez.
+- A credencial continua protegida no servidor; nada secreto é movido para o navegador.
+- Detalhes técnicos permanecem recolhidos e o teste de conexão continua disponível após a instalação.
