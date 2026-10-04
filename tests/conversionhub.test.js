@@ -1,0 +1,4 @@
+const assert=require('assert'),C=require('../conversionhub');
+let e=C.normalizeEvent({type:'sale',source:'whatsapp',occurredAt:'2026-10-03T10:00:00Z',externalEventId:'m1',value:199.9,currency:'brl'});assert.equal(e.type,'sale');assert.equal(e.currency,'BRL');assert.equal(e.value,199.9);
+let events=C.whatsappEvents({entry:[{changes:[{value:{metadata:{phone_number_id:'123',display_phone_number:'+55 71 99999-9999'},messages:[{id:'wamid.1',from:'5571999999999',timestamp:'1791021600',type:'text'}]}}]}]});assert.equal(events.length,1);assert.equal(events[0].type,'conversation');assert.equal(events[0].source,'whatsapp');assert.equal(events[0].metadata.phoneNumberId,'123');assert(!('text' in events[0].metadata));
+assert.throws(()=>C.normalizeEvent({type:'click',source:'whatsapp'}));console.log('OK: Conversion Hub normaliza e minimiza eventos do WhatsApp.');
