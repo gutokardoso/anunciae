@@ -4,16 +4,23 @@ const send=(type,extra={})=>{const payload={siteTagId:id,type,externalEventId:ty
 const norm=v=>String(v||'').toLowerCase();
 const leadWords=/(cadastro|cadastrar|criar[-_ /]?conta|nova[-_ /]?conta|registr|sign[-_ /]?up|signup|create[-_ /]?(account|user)|new[-_ /]?(account|user)|onboarding)/i;
 let leadSent=false,lastLeadAt=0;
-const sendLead=(reason='auto')=>{const t=Date.now();if(leadSent||t-lastLeadAt<10000)return;leadSent=true;lastLeadAt=t;send('lead',{detection:'automatic',signal:reason})};
+const pendingKey='__pia_pending_lead';
+const markPendingLead=()=>{try{sessionStorage.setItem(pendingKey,JSON.stringify({path:location.pathname,at:Date.now()}))}catch{}};
+const clearPendingLead=()=>{try{sessionStorage.removeItem(pendingKey)}catch{}};
+const readPendingLead=()=>{try{const x=JSON.parse(sessionStorage.getItem(pendingKey)||'null');return x&&Date.now()-Number(x.at||0)<120000?x:null}catch{return null}};
+const sendLead=(reason='auto')=>{const t=Date.now();if(leadSent||t-lastLeadAt<10000)return;leadSent=true;lastLeadAt=t;clearPendingLead();send('lead',{detection:'automatic',signal:reason})};
 const leadLikeUrl=v=>{try{let x=new URL(String(v),location.href);return leadWords.test(x.pathname)}catch{return leadWords.test(String(v||''))}};
 const leadLikeForm=f=>{if(!f)return false;let hint=[f.getAttribute('action'),f.id,f.className,f.getAttribute('name'),f.getAttribute('aria-label')].join(' ');if(leadWords.test(hint))return true;let text=norm(f.innerText||f.textContent),inputs=[...f.querySelectorAll('input')],names=inputs.map(x=>norm([x.name,x.id,x.placeholder,x.autocomplete].join(' '))).join(' '),hasEmail=inputs.some(x=>x.type==='email'||/email|e-mail/.test(norm(x.name+' '+x.id+' '+x.autocomplete))),hasPassword=inputs.some(x=>x.type==='password'),hasName=/(nome|name|first.?name|last.?name)/.test(names),loginOnly=/(entrar|login|sign.?in|acessar)/.test(text)&&!leadWords.test(text);return !loginOnly&&hasEmail&&hasPassword&&(hasName||leadWords.test(text))};
 send('pageview');
+const priorPending=readPendingLead();if(priorPending&&priorPending.path!==location.pathname)sendLead('registration_navigation');
 document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]');if(a&&/^(https?:\/\/)?(wa.me|api.whatsapp.com)|whatsapp:/i.test(a.getAttribute('href')||''))send('conversation')},true);
 // Detecta cadastros concluídos por APIs comuns sem ler ou transmitir dados do formulário.
 const nativeFetch=window.fetch;if(nativeFetch)window.fetch=function(input,init){const method=norm(init?.method||(input&&input.method)||'get').toUpperCase(),target=typeof input==='string'?input:input?.url;return nativeFetch.apply(this,arguments).then(r=>{if(['POST','PUT','PATCH'].includes(method)&&r.ok&&leadLikeUrl(target))sendLead('successful_request');return r})};
 if(window.XMLHttpRequest){const xo=XMLHttpRequest.prototype.open,xs=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(method,url){this.__piaMethod=norm(method).toUpperCase();this.__piaUrl=String(url||'');return xo.apply(this,arguments)};XMLHttpRequest.prototype.send=function(){this.addEventListener('load',()=>{if(['POST','PUT','PATCH'].includes(this.__piaMethod)&&this.status>=200&&this.status<300&&leadLikeUrl(this.__piaUrl))sendLead('successful_request')},{once:true});return xs.apply(this,arguments)}}
 // Para formulários tradicionais, só marca um candidato; a confirmação vem de mudança/sucesso observável.
-let pendingForm=false,pendingUrl='';document.addEventListener('submit',e=>{if(leadLikeForm(e.target)){pendingForm=true;pendingUrl=location.href;setTimeout(()=>{if(!pendingForm)return;let success=/(cadastro (realizado|conclu[ií]do)|conta (criada|criado)|bem[- ]vindo|welcome|sucesso)/i.test(document.body?.innerText||'');if(location.href!==pendingUrl||!document.contains(e.target)||success)sendLead('successful_form');pendingForm=false},2500)}},true);
-window.addEventListener('popstate',()=>{if(pendingForm&&location.href!==pendingUrl){sendLead('successful_navigation');pendingForm=false}});
+let pendingForm=false,pendingUrl='';document.addEventListener('submit',e=>{if(leadLikeForm(e.target)){pendingForm=true;pendingUrl=location.href;markPendingLead();setTimeout(()=>{if(!pendingForm)return;let success=/(cadastro (realizado|conclu[ií]do)|conta (criada|criado)|bem[- ]vindo|welcome|sucesso)/i.test(document.body?.innerText||'');if(location.href!==pendingUrl||!document.contains(e.target)||success)sendLead('successful_form');pendingForm=false},2500)}},true);
+const checkPendingNavigation=()=>{const p=readPendingLead();if((pendingForm&&location.href!==pendingUrl)||(p&&p.path!==location.pathname)){sendLead('successful_navigation');pendingForm=false}};
+window.addEventListener('popstate',checkPendingNavigation);
+for(const k of ['pushState','replaceState']){const original=history[k];if(original)history[k]=function(){const r=original.apply(this,arguments);setTimeout(checkPendingNavigation,0);return r}}
 window.PublicIA=window.PublicIA||{};window.PublicIA.track=(type,data={})=>{if(['pageview','conversation','lead'].includes(String(type)))send(String(type),data)}
 }catch(e){}})();
