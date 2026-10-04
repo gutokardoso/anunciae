@@ -1,4 +1,4 @@
-# Public.IA v89
+# Public.IA v90
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -360,7 +360,14 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Nenhuma escrita no Google Analytics foi habilitada.
 
 
-## v89 — auditoria Conversion Hub
+## v90 — auditoria Conversion Hub
 - Mantém Site/API, GA4 e WhatsApp como fontes normalizadas do Conversion Hub.
 - Resultados passa a expor conversões rastreadas por fonte sem misturá-las silenciosamente às métricas de mídia.
 - Meu painel usa conversões reais do Conversion Hub quando disponíveis, preservando investimento apenas do Data Hub.
+
+
+## v90 — padronização de espaçamento dos modais
+- Auditoria dos modais existentes.
+- Corrigido espaçamento interno do modal Site / API PublicIA e dos hubs CRM/E-commerce.
+- Mantido o espaçamento já existente nos demais modais para evitar regressões e padding duplicado.
+- Responsividade preservada com padding reduzido no mobile.
