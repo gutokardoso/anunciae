@@ -1,4 +1,4 @@
-# Public.IA v110
+# Public.IA v111
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -393,28 +393,28 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - A interface explica a origem/confiabilidade dos dados e a política de minimização: credenciais, senhas, cartão, saldo e extrato não são dados de análise da IA.
 
 
-## v110 — entrega da integração ao responsável técnico
+## v111 — entrega da integração ao responsável técnico
 - Sistema próprio passa a priorizar uma experiência adequada ao cliente leigo.
 - Endpoint e JSON ficam recolhidos em “Ver detalhes técnicos”.
 - Adicionado “Copiar instruções para o desenvolvedor”, com endpoint, autenticação, eventos aceitos, campos mínimos, exemplo e regras de segurança.
 - A chave continua sendo gerada uma única vez e deve permanecer somente no servidor do cliente.
 - A PublicIA não precisa acessar nem alterar o código do cliente; o responsável técnico implementa o protocolo oficial uma única vez.
 
-## v110 — Sistema próprio com UX enxuta
+## v111 — Sistema próprio com UX enxuta
 - O cliente não precisa mais lidar separadamente com chave, endpoint, JSON e variável de ambiente.
 - A PublicIA apresenta uma única ação: “Gerar pacote de instalação”.
 - O pacote reúne credencial server-side, endpoint, autenticação, eventos e regras para o responsável técnico instalar uma única vez.
 - A credencial continua protegida no servidor; nada secreto é movido para o navegador.
 - Detalhes técnicos permanecem recolhidos e o teste de conexão continua disponível após a instalação.
 
-## v110 — Integração PublicIA unificada
+## v111 — Integração PublicIA unificada
 
 - Para Sistema próprio, Tag PublicIA e conexão server-side passam a ser entregues em uma única instalação completa.
 - Um único comando na interface gera, ao mesmo tempo, a identificação pública da Tag e a credencial secreta do servidor.
 - A credencial secreta nunca é colocada na Tag: a separação técnica permanece por segurança, mas deixa de ser apresentada como duas integrações ao cliente.
 - O pacote único cobre visitas/interações observáveis e lead/sale/revenue confirmados pelo sistema.
 
-## v110 — Resultados coerentes com fontes reais
+## v111 — Resultados coerentes com fontes reais
 - Resultados passa a reconhecer dados reais do Conversion Hub mesmo quando ainda não existem métricas de mídia paga.
 - O aviso diferencia dados de site/conversão de métricas de anúncios, evitando afirmar que não há dados reais quando Site/API já está recebendo eventos.
 - O GA4 aparece como fonte conectada/sincronizada mesmo quando a consulta não gera novas conversões ou receita.
