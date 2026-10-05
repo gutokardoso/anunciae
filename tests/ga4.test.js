@@ -14,7 +14,7 @@ const {server,init,ensureAdmin}=require('../server');
   const base=`http://127.0.0.1:${server.address().port}`;
   try{
     const health=await (await fetch(base+'/api/health')).json();
-    assert.equal(health.version,'publicia-v109');
+    assert.equal(health.version,'publicia-v110');
     assert.equal(health.ga4OAuthConfigured,true);
     assert.equal(health.ga4CallbackUrl,'https://publicia.com.br/api/integrations/ga4/callback');
     const email=`ga4-${Date.now()}@teste.local`;
@@ -33,6 +33,6 @@ const {server,init,ensureAdmin}=require('../server');
     const noState=await fetch(base+'/api/integrations/ga4/callback',{redirect:'manual'});
     assert.equal(noState.status,302);
     assert.equal(noState.headers.get('location'),'/?integration=ga4&status=error&reason=state');
-    const appSource=require('fs').readFileSync(require('path').join(__dirname,'..','public','app.js'),'utf8');const cssSource=require('fs').readFileSync(require('path').join(__dirname,'..','public','styles.css'),'utf8');assert(appSource.includes("await loadState();closeModal();notify('Propriedade GA4 salva.')"));assert(appSource.includes('function notify('));assert(appSource.includes('GA4 sincronizado. ${r.rows} linhas processadas'));assert(!appSource.includes('GA4 sincronizado. ${r.rows} linhas processadas e ${r.eventsAccepted} agregados novos registrados.`);alert'));assert(cssSource.includes('.ga4Manager{padding:24px 28px 28px}'));assert(cssSource.includes('.appToasts{position:fixed'));console.log('ga4.test.js OK');
+    const appSource=require('fs').readFileSync(require('path').join(__dirname,'..','public','app.js'),'utf8');const cssSource=require('fs').readFileSync(require('path').join(__dirname,'..','public','styles.css'),'utf8');assert(appSource.includes("await loadState();closeModal();notify('Propriedade GA4 salva.')"));assert(appSource.includes('function notify('));assert(appSource.includes('GA4 sincronizado. ${r.rows} linha(s) consultada(s)'));assert(appSource.includes('nenhuma conversão ou receita nova para registrar'));assert(!appSource.includes('GA4 sincronizado. ${r.rows} linhas processadas e ${r.eventsAccepted} agregados novos registrados.`);alert'));assert(cssSource.includes('.ga4Manager{padding:24px 28px 28px}'));assert(cssSource.includes('.appToasts{position:fixed'));console.log('ga4.test.js OK');
   }finally{await new Promise(r=>server.close(r))}
 })().catch(e=>{console.error(e);process.exit(1)});
