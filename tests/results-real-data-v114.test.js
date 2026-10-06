@@ -1,0 +1,12 @@
+'use strict';
+const assert=require('assert'),fs=require('fs'),path=require('path');
+const server=fs.readFileSync(path.join(__dirname,'..','server.js'),'utf8');
+const app=fs.readFileSync(path.join(__dirname,'..','public','app.js'),'utf8');
+assert(server.includes('paidMediaSynced:rows.length>0'));
+assert(server.includes('synced:hasRealData'));
+assert(server.includes("dataSources:{ga4:"));
+assert(app.includes('A PublicIA já está recebendo dados reais do site e das conversões. As métricas de mídia paga ainda não foram sincronizadas.'));
+assert(app.includes('Google Analytics 4</b> · sincronizado'));
+assert(app.includes('sem conversões/receita novas'));
+assert(!app.includes('Ainda não há métricas reais sincronizadas. A PublicIA não inventará resultados.'));
+console.log('OK: v114 distingue dados reais de conversão de métricas de mídia e mostra GA4 sincronizado sem duplicar visitas.');
