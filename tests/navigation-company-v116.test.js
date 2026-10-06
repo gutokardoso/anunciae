@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('assert'),fs=require('fs'),path=require('path');
+const app=fs.readFileSync(path.join(__dirname,'..','public','app.js'),'utf8');
+const html=fs.readFileSync(path.join(__dirname,'..','public','index.html'),'utf8');
+const css=fs.readFileSync(path.join(__dirname,'..','public','styles.css'),'utf8');
+assert(!html.includes('Seus anúncios, sem complicação.'));
+assert(app.includes("Olá, ${esc(currentUser.name)}.<br><span>Plano ${esc(state.entitlements?.planName||'')}.</span>"));
+assert(app.includes("classList.toggle('navActive',active)"));
+assert(css.includes('.navDropButton.navActive:after'));
+assert(css.includes('.companyReadOnly input:disabled'));
+assert(app.includes("setCompanyFormLocked(true)"));
+assert(app.includes("companyEdit').onclick=()=>openCompany(true)"));
+console.log('OK: v116 navegação ativa, saudação enxuta e Minha empresa leitura/edição.');

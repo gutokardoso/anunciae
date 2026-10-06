@@ -1,5 +1,5 @@
 'use strict';
-/** PublicIA Server SDK v115 — mantenha a chave somente no servidor. */
+/** PublicIA Server SDK v116 — mantenha a chave somente no servidor. */
 class PublicIA {
   constructor({key, endpoint='https://publicia.com.br/api/conversions/site/events', fetchImpl=globalThis.fetch}={}) {
     if(!key) throw new Error('PUBLICIA_SERVER_SIDE_KEY não configurada.');
