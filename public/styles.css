@@ -339,12 +339,12 @@ body:has(#public.active) header #registerAccess:hover,
 
 .trustedSourceSelectLabel{display:grid;gap:7px;font-size:12px;font-weight:700;color:var(--muted)}.trustedSourceSelect{width:100%;min-height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 14px;font:inherit;color:var(--text)}.trustedImplementation{margin-top:14px;padding:16px;border-radius:12px;background:#f8f9ff;border:1px solid #e1e4f2}.trustedImplementationHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}.trustedImplementation p{margin:6px 0 12px;color:var(--muted);font-size:13px;line-height:1.5}.trustedImplementation button[disabled]{opacity:.55;cursor:not-allowed}
 
-/* v112 — handoff seguro da integração de Sistema próprio */
+/* v113 — handoff seguro da integração de Sistema próprio */
 .developerHandoff{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:18px;border:1px solid #e5e7f3;border-radius:14px;background:#f8f9ff;margin:16px 0}.developerHandoff p{margin:6px 0 0;color:#5d6475;line-height:1.45}.developerHandoff button{flex:0 0 auto}.technicalDetails{margin:14px 0;border:1px solid #e5e7f3;border-radius:12px;padding:12px 14px;background:#fff}.technicalDetails summary{cursor:pointer;font-weight:600;color:#353b4c}.technicalDetails[open] summary{margin-bottom:12px}@media(max-width:700px){.developerHandoff{flex-direction:column}.developerHandoff button{width:100%}}
-/* v112 — onboarding enxuto para Sistema próprio */
+/* v113 — onboarding enxuto para Sistema próprio */
 .simpleIntegration{margin:16px 0;padding:20px;border:1px solid #e5e7f3;border-radius:14px;background:#f8f9ff;display:flex;flex-direction:column;align-items:flex-start;gap:8px}.simpleIntegration p{margin:0;color:#5d6475;line-height:1.5;max-width:680px}.simpleIntegration small,.installPackageReady small{color:#747b8c;line-height:1.4}.installPackageReady{margin:14px 0;padding:18px;border:1px solid #cfe7d8;border-radius:14px;background:#f2fbf5;display:flex;flex-direction:column;align-items:flex-start;gap:8px}.installPackageReady p{margin:0;color:#4f5f56}.connectionCheck{margin:14px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;border:1px solid #e5e7f3;border-radius:12px;background:#fff}.connectionCheck span{font-weight:600;color:#237343}@media(max-width:700px){.simpleIntegration .primary,.installPackageReady .primary,.connectionCheck .secondary{width:100%}.connectionCheck{align-items:stretch;flex-direction:column}}
 
-/* v112 — navegação ativa, painel enxuto e Minha empresa em modo leitura */
+/* v113 — navegação ativa, painel enxuto e Minha empresa em modo leitura */
 #userNav>button,#userNav>.navDropdown>.navDropButton{position:relative}
 #userNav>button:after,#userNav>.navDropdown>.navDropButton:after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;border-radius:2px;background:var(--action);transform:scaleX(0);transform-origin:center;transition:transform .16s ease}
 #userNav>button:hover:after,#userNav>.navDropdown>.navDropButton:hover:after,#userNav>button.navActive:after,#userNav>.navDropdown>.navDropButton.navActive:after{transform:scaleX(1)}
@@ -353,7 +353,16 @@ body:has(#public.active) header #registerAccess:hover,
 .dashboardWelcome span{display:block}
 .companyReadOnly input:disabled,.companyReadOnly select:disabled,.companyReadOnly textarea:disabled{opacity:1;color:var(--ink);-webkit-text-fill-color:var(--ink);background:#f7f8fc;cursor:default}
 .companyReadOnly .formActions{justify-content:flex-end}
-/* v112 — grade ampliada de plataformas na página inicial */
+/* v113 — grade ampliada de plataformas na página inicial */
 .channelsSection .channelLogoStrip{max-width:1280px;gap:34px 42px}
 .channelsSection .channelLogoItem{min-width:170px;justify-content:center}
 @media(max-width:760px){.channelsSection .channelLogoStrip{gap:22px 14px;padding-left:8px;padding-right:8px}.channelsSection .channelLogoItem{min-width:0;width:calc(50% - 10px);justify-content:flex-start}}
+
+/* v113: marcas da seção Conexões — wordmarks sem nome duplicado e fallback sem ícone quebrado */
+.channelLogoItem.logoContainsName{min-width:170px}
+.channelLogoItem .channelWordmark{width:auto;height:42px;max-width:150px;object-fit:contain}
+.channelLogoItem .wideWordmark{max-width:170px}
+.channelLogoItem .salesforceWordmark{height:50px;max-width:126px}
+.channelLogoItem .logoFallback{display:none;font-size:15px;font-weight:750;color:var(--ink);white-space:nowrap}
+.channelLogoItem .logoFallback.logoFallbackVisible{display:inline}
+@media(max-width:760px){.channelLogoItem .channelWordmark{height:34px;max-width:130px}.channelLogoItem .wideWordmark{max-width:145px}.channelLogoItem .salesforceWordmark{height:40px;max-width:108px}.channelLogoItem .logoFallback{font-size:13px}}
