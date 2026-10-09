@@ -6,5 +6,5 @@ assert.match(src,/if\(p==='linkedin'\)return collectLinkedin\(userId,days\)/);
 assert.match(src,/\/rest\/adAnalytics\?/);
 assert.match(src,/timeGranularity:'DAILY'/);
 assert.match(src,/if\(!Array\.isArray\(j\.elements\)\)/);
-assert.match(src,/version:'publicia-v119'/);
-console.log('OK: v119 coletor LinkedIn read-only e versionamento.');
+assert.match(src,/version:'publicia-v120'/);
+console.log('OK: v120 coletor LinkedIn read-only e versionamento.');

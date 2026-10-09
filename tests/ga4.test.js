@@ -14,7 +14,7 @@ const {server,init,ensureAdmin}=require('../server');
   const base=`http://127.0.0.1:${server.address().port}`;
   try{
     const health=await (await fetch(base+'/api/health')).json();
-    assert.equal(health.version,'publicia-v119');
+    assert.equal(health.version,'publicia-v120');
     assert.equal(health.ga4OAuthConfigured,true);
     assert.equal(health.ga4CallbackUrl,'https://publicia.com.br/api/integrations/ga4/callback');
     const email=`ga4-${Date.now()}@teste.local`;

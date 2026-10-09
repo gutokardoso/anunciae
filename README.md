@@ -1,4 +1,4 @@
-# Public.IA v119
+# Public.IA v120
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -442,3 +442,16 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Respostas inválidas/erros de permissão não são convertidos em métricas fictícias.
 - X Ads continua aguardando implementação e homologação do coletor; não houve alteração em sua integração.
 - LinkedIn Standard Tier e leitura real em produção continuam pendentes de aprovação/homologação.
+
+## v120 — X Ads Data Hub (somente leitura)
+- Coletor X Ads por campanha/dia usando Standard Ads API e OAuth 1.0a existente; sem publicação de campanhas.
+- Listagem paginada de campanhas, lotes de estatísticas, gasto convertido de micros para unidade monetária.
+- Assinatura OAuth 1.0a corrigida para URLs com query string.
+- Necessária homologação de respostas reais em produção.
+
+### Auditoria técnica adicional
+- O Data Hub só associa métricas a campanhas com IDs externos presentes na base da PublicIA; campanhas criadas fora dela podem ficar não associadas.
+- Google Ads consulta apenas janelas LAST_7/14/30/90_DAYS; pedidos diferentes caem em 30 dias.
+- Coletores Google e Meta ainda requerem paginação completa para contas com muitos resultados.
+- Os testes existentes são majoritariamente estruturais ou usam mocks; não substituem testes de APIs reais.
+- Assinaturas recorrentes e publicação multicanal completa permanecem fora do escopo desta versão.
