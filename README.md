@@ -1,4 +1,4 @@
-# Public.IA v121
+# Public.IA v122
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -456,7 +456,7 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Os testes existentes são majoritariamente estruturais ou usam mocks; não substituem testes de APIs reais.
 - Assinaturas recorrentes e publicação multicanal completa permanecem fora do escopo desta versão.
 
-## v121 — Modal LinkedIn Ads padronizado
+## v122 — Modal LinkedIn Ads padronizado
 
 - Interface de gerenciamento da conexão LinkedIn simplificada ao padrão das demais redes.
 - Controles e textos temporários de homologação removidos somente da interface do cliente.
