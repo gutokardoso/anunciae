@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const s=fs.readFileSync('server.js','utf8'),a=fs.readFileSync('public/app.js','utf8');
+const src=s.slice(s.indexOf('const VERIFIED_CHANNEL_MINIMUMS='),s.indexOf('function publicationReadiness('));
+const validate=vm.runInNewContext(src+';validateChannelBudget');
+let p=validate(20,['meta','google','tiktok','linkedin','x']);assert.equal(p.status,'pending_verification');assert.equal(p.valid,true);assert.equal(p.publicationAllowed,false);assert.equal(p.minimumTotal,null);
+let rules={meta:{verified:true,currency:'BRL',minimumDaily:6},google:{verified:true,currency:'BRL',minimumDaily:15}};
+let low=validate(20,['meta','google'],rules);assert.equal(low.status,'insufficient');assert.equal(low.minimumTotal,21);assert.equal(low.publicationAllowed,false);
+let ok=validate(21,['meta','google'],rules);assert.equal(ok.status,'approved');assert.equal(ok.publicationAllowed,true);
+assert.equal(validate(4,['meta'],rules).status,'invalid');assert.equal(validate(20,[],rules).valid,false);
+assert.match(s,/url==='\/api\/budget\/validate'/);assert.match(a,/budgetValidationNotice/);assert.match(a,/api\/budget\/validate/);
+console.log('v123 budget validation: OK');
