@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+const source=fs.readFileSync(path.join(__dirname,'../server.js'),'utf8');
+assert.match(source,/async function collectTikTok\(userId,days\)/);
+assert.match(source,/if\(p==='tiktok'\)return collectTikTok\(userId,days\)/);
+assert.match(source,/report\/integrated\/get\//);
+assert.match(source,/page_info\?\.total_page/);
+assert.match(source,/if\(!Array\.isArray\(list\)\)/);
+assert.match(source,/if\(page>100\)/);
+assert.match(source,/throw Object\.assign\(new Error\(`\$\{p\}: coletor preparado/);
+console.log('v118 Data Hub TikTok: verificações estruturais OK');

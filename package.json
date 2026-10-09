@@ -1,10 +1,10 @@
 {
-  "name": "publicia-v117",
-  "version": "117.0.0",
+  "name": "publicia-v118",
+  "version": "118.0.0",
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "test": "node tests/smoke.test.js && node tests/profile.test.js && node tests/datahub.test.js && node tests/conversionhub.test.js && node tests/conversion-sources.test.js && node tests/ga4.test.js && node tests/conversion-flow.test.js && node tests/modal-spacing.test.js && node tests/siteapi-guide.test.js && node tests/siteapi-runtime.test.js && node tests/site-tag.test.js && node tests/site-onboarding-v100.test.js && node tests/site-tag-crossorigin.test.js && node tests/trusted-conversion-architecture.test.js && node tests/trusted-lead-sources-v116.test.js && node tests/trusted-lead-selector-v116.test.js && node tests/custom-system-v116.test.js && node tests/developer-handoff-v116.test.js && node tests/unified-site-ux-v116.test.js && node tests/site-crm-separation-v116.test.js && node tests/sdk-v116.test.js && node tests/results-real-data-v116.test.js && node tests/navigation-company-v116.test.js && node tests/ui-language-connections-v116.test.js && node tests/home-connections-logos-v116.test.js && node tests/v117-regressions.test.js"
+    "test": "node tests/smoke.test.js && node tests/profile.test.js && node tests/datahub.test.js && node tests/conversionhub.test.js && node tests/conversion-sources.test.js && node tests/ga4.test.js && node tests/conversion-flow.test.js && node tests/modal-spacing.test.js && node tests/siteapi-guide.test.js && node tests/siteapi-runtime.test.js && node tests/site-tag.test.js && node tests/site-onboarding-v100.test.js && node tests/site-tag-crossorigin.test.js && node tests/trusted-conversion-architecture.test.js && node tests/trusted-lead-sources-v116.test.js && node tests/trusted-lead-selector-v116.test.js && node tests/custom-system-v116.test.js && node tests/developer-handoff-v116.test.js && node tests/unified-site-ux-v116.test.js && node tests/site-crm-separation-v116.test.js && node tests/sdk-v116.test.js && node tests/results-real-data-v116.test.js && node tests/navigation-company-v116.test.js && node tests/ui-language-connections-v116.test.js && node tests/home-connections-logos-v116.test.js && node tests/v117-regressions.test.js && node tests/v118-datahub.test.js"
   },
   "engines": {
     "node": ">=20"

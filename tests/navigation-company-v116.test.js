@@ -10,4 +10,4 @@ assert(css.includes('.navDropButton.navActive:after'));
 assert(css.includes('.companyReadOnly input:disabled'));
 assert(app.includes("setCompanyFormLocked(true)"));
 assert(app.includes("companyEdit').onclick=()=>openCompany(true)"));
-console.log('OK: v117 navegação ativa, saudação enxuta e Minha empresa leitura/edição.');
+console.log('OK: v118 navegação ativa, saudação enxuta e Minha empresa leitura/edição.');

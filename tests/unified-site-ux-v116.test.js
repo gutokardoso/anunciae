@@ -6,4 +6,4 @@ assert(!app.includes('CRM <small style="font-weight:400">(opcional)</small>'));
 assert(!app.includes('Fontes confiáveis para leads'));
 assert(!app.includes("openModal('Conectar E-commerce'"));
 assert(app.includes('PUBLICAÇÃO MULTICANAL'));
-console.log('OK unified site UX v117');
+console.log('OK unified site UX v118');

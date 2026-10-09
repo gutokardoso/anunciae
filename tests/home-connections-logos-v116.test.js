@@ -13,7 +13,7 @@ for(const n of ['WooCommerce','Wix','Nuvemshop','RD Station','Pipedrive','Salesf
 }
 assert(html.includes('onerror="this.hidden=true;this.nextElementSibling.classList.add(\'logoFallbackVisible\')"'));
 assert(css.includes('.logoFallback.logoFallbackVisible'));
-assert.equal(pkg.version,'117.0.0');
-console.log('OK: v117 evita logos quebradas visíveis e não repete nomes em wordmarks.');
+assert.equal(pkg.version,'118.0.0');
+console.log('OK: v118 evita logos quebradas visíveis e não repete nomes em wordmarks.');
 const cssV116=fs.readFileSync(path.join(__dirname,'..','public','styles.css'),'utf8');
 for(const token of ['wordmarkWoo','wordmarkNuvem','wordmarkRD','wordmarkPipedrive','mix-blend-mode:multiply']) assert(cssV116.includes(token),token);

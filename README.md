@@ -1,4 +1,4 @@
-# Public.IA v117
+# Public.IA v118
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -421,10 +421,17 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Sessões do GA4 não são somadas às visitas do Tag PublicIA, evitando dupla contagem.
 - A mensagem de sincronização do GA4 agora distingue linhas consultadas de conversões/receita efetivamente registradas.
 
-## v117 — Correções estruturais auditadas
+## v118 — Correções estruturais auditadas
 
 - Resultados aceitam até 3650 dias, sempre respeitando os limites do plano na rota autenticada.
 - Google Ads não interpreta automaticamente todas as conversões como vendas: vendas e receita ficam em zero sem confirmação comercial. O campo genérico de conversões continua disponível para análise no payload original.
 - Modal de publicação não apresenta versão antiga. Nenhuma publicação externa é ativada.
-- Assets com cache busting v117. Integrações OAuth e seleções persistidas não foram alteradas.
+- Assets com cache busting v118. Integrações OAuth e seleções persistidas não foram alteradas.
 - As seções históricas abaixo registram entregas anteriores, não versões atuais.
+
+
+## v118 — Data Hub (incremento seguro)
+- Adicionado coletor TikTok Ads em modo somente leitura (Marketing API v1.3), por conta selecionada, campanha e dia, com paginação e validação do formato.
+- O coletor não cria nem publica anúncios. Permissões, aprovação da conta e dados efetivos devem ser homologados no ambiente real.
+- LinkedIn Ads e X Ads permanecem em estado de espera explícito: nenhuma métrica é simulada.
+- Dados de campanhas externas sem correspondência interna continuam classificados como `unmapped`, sem atribuição automática a outra campanha.
