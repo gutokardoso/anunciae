@@ -1,4 +1,4 @@
-# Public.IA v123
+# Public.IA v124
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -463,7 +463,7 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - Endpoints e lógica de homologação mantidos no servidor; nenhuma campanha DRAFT é excluída.
 - OAuth, seleção de conta e demais integrações preservados.
 
-## v123 — Validação segura do orçamento por canal
+## v124 — Validação segura do orçamento por canal
 - Endpoint autenticado `POST /api/budget/validate` retorna estado `pending_verification`, `insufficient`, `approved` ou `invalid`.
 - Mínimos reais **não são presumidos**: regras homologadas devem preencher `VERIFIED_CHANNEL_MINIMUMS` com moeda BRL, `minimumDaily` e `verified: true`, após conferência por canal/objetivo/conta.
 - Criação e edição de rascunhos validam formato e valor, sem bloquear por limites desconhecidos.

@@ -8,4 +8,4 @@ let low=validate(20,['meta','google'],rules);assert.equal(low.status,'insufficie
 let ok=validate(21,['meta','google'],rules);assert.equal(ok.status,'approved');assert.equal(ok.publicationAllowed,true);
 assert.equal(validate(4,['meta'],rules).status,'invalid');assert.equal(validate(20,[],rules).valid,false);
 assert.match(s,/url==='\/api\/budget\/validate'/);assert.match(a,/budgetValidationNotice/);assert.match(a,/api\/budget\/validate/);
-console.log('v123 budget validation: OK');
+console.log('v124 budget validation: OK');
