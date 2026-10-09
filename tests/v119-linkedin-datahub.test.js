@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const src=fs.readFileSync(require('node:path').join(__dirname,'../server.js'),'utf8');
+assert.match(src,/async function collectLinkedin\(userId,days\)/);
+assert.match(src,/if\(p==='linkedin'\)return collectLinkedin\(userId,days\)/);
+assert.match(src,/\/rest\/adAnalytics\?/);
+assert.match(src,/timeGranularity:'DAILY'/);
+assert.match(src,/if\(!Array\.isArray\(j\.elements\)\)/);
+assert.match(src,/version:'publicia-v119'/);
+console.log('OK: v119 coletor LinkedIn read-only e versionamento.');

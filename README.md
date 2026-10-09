@@ -1,4 +1,4 @@
-# Public.IA v118
+# Public.IA v119
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -435,3 +435,10 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - O coletor não cria nem publica anúncios. Permissões, aprovação da conta e dados efetivos devem ser homologados no ambiente real.
 - LinkedIn Ads e X Ads permanecem em estado de espera explícito: nenhuma métrica é simulada.
 - Dados de campanhas externas sem correspondência interna continuam classificados como `unmapped`, sem atribuição automática a outra campanha.
+
+## v119 — Data Hub LinkedIn (somente leitura)
+- Novo coletor diário de métricas por campanha via LinkedIn adAnalytics, limitado a 90 dias por sincronização.
+- Sem publicação de anúncios, sem mudança em OAuth ou contas selecionadas.
+- Respostas inválidas/erros de permissão não são convertidos em métricas fictícias.
+- X Ads continua aguardando implementação e homologação do coletor; não houve alteração em sua integração.
+- LinkedIn Standard Tier e leitura real em produção continuam pendentes de aprovação/homologação.
