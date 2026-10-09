@@ -339,12 +339,12 @@ body:has(#public.active) header #registerAccess:hover,
 
 .trustedSourceSelectLabel{display:grid;gap:7px;font-size:12px;font-weight:700;color:var(--muted)}.trustedSourceSelect{width:100%;min-height:46px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:0 14px;font:inherit;color:var(--text)}.trustedImplementation{margin-top:14px;padding:16px;border-radius:12px;background:#f8f9ff;border:1px solid #e1e4f2}.trustedImplementationHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}.trustedImplementation p{margin:6px 0 12px;color:var(--muted);font-size:13px;line-height:1.5}.trustedImplementation button[disabled]{opacity:.55;cursor:not-allowed}
 
-/* v116 — handoff seguro da integração de Sistema próprio */
+/* v117 — handoff seguro da integração de Sistema próprio */
 .developerHandoff{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:18px;border:1px solid #e5e7f3;border-radius:14px;background:#f8f9ff;margin:16px 0}.developerHandoff p{margin:6px 0 0;color:#5d6475;line-height:1.45}.developerHandoff button{flex:0 0 auto}.technicalDetails{margin:14px 0;border:1px solid #e5e7f3;border-radius:12px;padding:12px 14px;background:#fff}.technicalDetails summary{cursor:pointer;font-weight:600;color:#353b4c}.technicalDetails[open] summary{margin-bottom:12px}@media(max-width:700px){.developerHandoff{flex-direction:column}.developerHandoff button{width:100%}}
-/* v116 — onboarding enxuto para Sistema próprio */
+/* v117 — onboarding enxuto para Sistema próprio */
 .simpleIntegration{margin:16px 0;padding:20px;border:1px solid #e5e7f3;border-radius:14px;background:#f8f9ff;display:flex;flex-direction:column;align-items:flex-start;gap:8px}.simpleIntegration p{margin:0;color:#5d6475;line-height:1.5;max-width:680px}.simpleIntegration small,.installPackageReady small{color:#747b8c;line-height:1.4}.installPackageReady{margin:14px 0;padding:18px;border:1px solid #cfe7d8;border-radius:14px;background:#f2fbf5;display:flex;flex-direction:column;align-items:flex-start;gap:8px}.installPackageReady p{margin:0;color:#4f5f56}.connectionCheck{margin:14px 0;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;border:1px solid #e5e7f3;border-radius:12px;background:#fff}.connectionCheck span{font-weight:600;color:#237343}@media(max-width:700px){.simpleIntegration .primary,.installPackageReady .primary,.connectionCheck .secondary{width:100%}.connectionCheck{align-items:stretch;flex-direction:column}}
 
-/* v116 — navegação ativa, painel enxuto e Minha empresa em modo leitura */
+/* v117 — navegação ativa, painel enxuto e Minha empresa em modo leitura */
 #userNav>button,#userNav>.navDropdown>.navDropButton{position:relative}
 #userNav>button:after,#userNav>.navDropdown>.navDropButton:after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;border-radius:2px;background:var(--action);transform:scaleX(0);transform-origin:center;transition:transform .16s ease}
 #userNav>button:hover:after,#userNav>.navDropdown>.navDropButton:hover:after,#userNav>button.navActive:after,#userNav>.navDropdown>.navDropButton.navActive:after{transform:scaleX(1)}
@@ -353,12 +353,12 @@ body:has(#public.active) header #registerAccess:hover,
 .dashboardWelcome span{display:block}
 .companyReadOnly input:disabled,.companyReadOnly select:disabled,.companyReadOnly textarea:disabled{opacity:1;color:var(--ink);-webkit-text-fill-color:var(--ink);background:#f7f8fc;cursor:default}
 .companyReadOnly .formActions{justify-content:flex-end}
-/* v116 — grade ampliada de plataformas na página inicial */
+/* v117 — grade ampliada de plataformas na página inicial */
 .channelsSection .channelLogoStrip{max-width:1280px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 28px}
 .channelsSection .channelLogoItem{min-width:0;width:100%;justify-content:center;text-align:center}
 @media(max-width:760px){.channelsSection .channelLogoStrip{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px;padding-left:14px;padding-right:14px}.channelsSection .channelLogoItem{min-width:0;width:100%;justify-content:center;text-align:center}}
 
-/* v116: marcas da seção Conexões — wordmarks sem nome duplicado e fallback sem ícone quebrado */
+/* v117: marcas da seção Conexões — wordmarks sem nome duplicado e fallback sem ícone quebrado */
 .channelLogoItem.logoContainsName{min-width:0}
 .channelLogoItem .channelWordmark{width:132px;height:48px;object-fit:contain}
 .channelLogoItem .wideWordmark{width:132px;height:48px;object-fit:contain}
@@ -371,7 +371,7 @@ body:has(#public.active) header #registerAccess:hover,
 .channelLogoItem .logoFallback.logoFallbackVisible{display:inline}
 @media(max-width:760px){.channelLogoItem .channelWordmark,.channelLogoItem .wideWordmark,.channelLogoItem .salesforceWordmark{width:118px;height:44px;max-width:118px}.channelLogoItem .wordmarkWoo{width:130px;max-width:130px}.channelLogoItem .wordmarkNuvem{width:158px;height:50px;max-width:158px}.channelLogoItem .wordmarkRD{width:150px;height:48px;max-width:150px}.channelLogoItem .wordmarkPipedrive{width:104px;height:40px;max-width:104px}.channelLogoItem .logoFallback{font-size:13px}}
 
-/* v116 — normalização visual dos wordmarks na seção Conexões */
+/* v117 — normalização visual dos wordmarks na seção Conexões */
 .channelLogoItem.logoContainsName{overflow:visible}
 .channelLogoItem .wordmarkWoo{width:178px;height:58px;transform:scale(1.28);transform-origin:center}
 .channelLogoItem .wordmarkNuvem{width:210px;height:62px;transform:scale(1.52);transform-origin:center;mix-blend-mode:multiply}
@@ -384,7 +384,7 @@ body:has(#public.active) header #registerAccess:hover,
   .channelLogoItem .wordmarkPipedrive{width:112px;height:42px;max-width:112px}
 }
 
-/* v116 — ajuste fino de proporção dos wordmarks solicitado após validação visual */
+/* v117 — ajuste fino de proporção dos wordmarks solicitado após validação visual */
 .channelLogoItem .wordmarkWoo{width:198px;height:64px;transform:scale(1.38)}
 .channelLogoItem .wordmarkNuvem{width:230px;height:66px;transform:scale(1.62)}
 .channelLogoItem .wordmarkPipedrive{width:108px;height:40px}

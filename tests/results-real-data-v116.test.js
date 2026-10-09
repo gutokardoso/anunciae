@@ -9,4 +9,4 @@ assert(app.includes('A PublicIA já está recebendo dados reais do site e das co
 assert(app.includes('Google Analytics 4</b> · sincronizado'));
 assert(app.includes('sem conversões/receita novas'));
 assert(!app.includes('Ainda não há métricas reais sincronizadas. A PublicIA não inventará resultados.'));
-console.log('OK: v116 distingue dados reais de conversão de métricas de mídia e mostra GA4 sincronizado sem duplicar visitas.');
+console.log('OK: v117 distingue dados reais de conversão de métricas de mídia e mostra GA4 sincronizado sem duplicar visitas.');

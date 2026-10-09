@@ -1,4 +1,4 @@
-# Public.IA v116
+# Public.IA v117
 
 ### Identidade Public.IA
 - Nome comercial migrado de Public.IA para **Public.IA**.
@@ -420,3 +420,11 @@ Camada central de sincronização e normalização de métricas multicanal. Sinc
 - O GA4 aparece como fonte conectada/sincronizada mesmo quando a consulta não gera novas conversões ou receita.
 - Sessões do GA4 não são somadas às visitas do Tag PublicIA, evitando dupla contagem.
 - A mensagem de sincronização do GA4 agora distingue linhas consultadas de conversões/receita efetivamente registradas.
+
+## v117 — Correções estruturais auditadas
+
+- Resultados aceitam até 3650 dias, sempre respeitando os limites do plano na rota autenticada.
+- Google Ads não interpreta automaticamente todas as conversões como vendas: vendas e receita ficam em zero sem confirmação comercial. O campo genérico de conversões continua disponível para análise no payload original.
+- Modal de publicação não apresenta versão antiga. Nenhuma publicação externa é ativada.
+- Assets com cache busting v117. Integrações OAuth e seleções persistidas não foram alteradas.
+- As seções históricas abaixo registram entregas anteriores, não versões atuais.
